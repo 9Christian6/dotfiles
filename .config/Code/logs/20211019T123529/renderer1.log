@@ -1,7 +1,0 @@
-[2021-10-19 12:35:30.897] [renderer1] [info] Starting extension host with pid 56349.
-[2021-10-19 12:35:31.413] [renderer1] [error] [Extension Host] (node:56349) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
-(Use `code --trace-deprecation ...` to show where the warning was created)
-[2021-10-19 13:49:36.335] [renderer1] [info] Starting extension host with pid 67103.
-[2021-10-19 13:49:36.951] [renderer1] [error] [Extension Host] (node:67103) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
-(Use `code --trace-deprecation ...` to show where the warning was created)
-[2021-10-19 13:55:53.865] [renderer1] [error] ENOENT: no such file or directory, open '/home/christian/.config/Code/User/globalStorage/vscodevim.vim/.registers': Error: ENOENT: no such file or directory, open '/home/christian/.config/Code/User/globalStorage/vscodevim.vim/.registers'
