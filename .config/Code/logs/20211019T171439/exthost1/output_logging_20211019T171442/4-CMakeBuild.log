@@ -1,0 +1,31 @@
+[variant] Loaded new set of variants
+[kit] Successfully loaded 1 kits from /home/christian/.local/share/CMakeTools/cmake-tools-kits.json
+[proc] Executing command: /bin/c89-gcc -v
+[proc] Executing command: /bin/c99-gcc -v
+[proc] Executing command: /bin/gcc -v
+[proc] Executing command: /bin/gcc-9 -v
+[proc] Executing command: /bin/x86_64-linux-gnu-gcc -v
+[proc] Executing command: /bin/x86_64-linux-gnu-gcc-9 -v
+[proc] Executing command: /usr/bin/c89-gcc -v
+[proc] Executing command: /usr/bin/c99-gcc -v
+[proc] Executing command: /usr/bin/gcc -v
+[proc] Executing command: /usr/bin/gcc-9 -v
+[proc] Executing command: /usr/bin/x86_64-linux-gnu-gcc -v
+[proc] Executing command: /usr/bin/x86_64-linux-gnu-gcc-9 -v
+[kit] Found Kit: GCC 9.3.0 x86_64-linux-gnu
+[kit] Found Kit: GCC 9.3.0 x86_64-linux-gnu
+[kit] Found Kit: GCC 9.3.0 x86_64-linux-gnu
+[kit] Found Kit: GCC 9.3.0 x86_64-linux-gnu
+[kit] Found Kit: GCC 9.3.0 x86_64-linux-gnu
+[kit] Found Kit: GCC 9.3.0 x86_64-linux-gnu
+[kit] Found Kit: GCC 9.3.0 x86_64-linux-gnu
+[kit] Found Kit: GCC 9.3.0 x86_64-linux-gnu
+[kit] Found Kit: GCC 9.3.0 x86_64-linux-gnu
+[kit] Found Kit: GCC 9.3.0 x86_64-linux-gnu
+[kit] Found Kit: GCC 9.3.0 x86_64-linux-gnu
+[kit] Found Kit: GCC 9.3.0 x86_64-linux-gnu
+[kit] Successfully loaded 1 kits from /home/christian/.local/share/CMakeTools/cmake-tools-kits.json
+[main] Changes were detected in CMakeLists.txt but we could not reconfigure the project because another operation is already in progress.
+[main] Changes were detected in CMakeLists.txt but we could not reconfigure the project because another operation is already in progress.
+[main] Changes were detected in CMakeLists.txt but we could not reconfigure the project because another operation is already in progress.
+[main] Changes were detected in CMakeLists.txt but we could not reconfigure the project because another operation is already in progress.

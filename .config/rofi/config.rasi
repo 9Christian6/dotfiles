@@ -1,0 +1,15 @@
+configuration {
+    modi: "combi,drun,run,window,ssh";
+    cycle: true;
+    /*sort: true;*/
+    show-icons: true;
+    lines: 7;
+    line-padding: 5;
+    line-margin: 5;
+    padding: 400;
+    matching: "regex";
+    separator-style: "none";
+    hide-scrollbar: true;
+    font: "System San Francisco Display 12";
+    width: 50;
+}

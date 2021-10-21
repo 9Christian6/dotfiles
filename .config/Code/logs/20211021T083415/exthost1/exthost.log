@@ -1,0 +1,37 @@
+[2021-10-21 08:34:17.831] [exthost] [info] extension host started
+[2021-10-21 08:34:17.831] [exthost] [info] Skipping acquiring lock for /home/christian/.config/Code/User/workspaceStorage/1158196e251158784cab94b47ba3e646.
+[2021-10-21 08:34:17.954] [exthost] [info] ExtensionService#_doActivateExtension vscode.microsoft-authentication, startup: false, activationEvent: 'onAuthenticationRequest:microsoft'
+[2021-10-21 08:34:17.954] [exthost] [info] ExtensionService#loadCommonJSModule file:///snap/code/78/usr/share/code/resources/app/extensions/microsoft-authentication/dist/extension.js
+[2021-10-21 08:34:17.963] [exthost] [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: true, activationEvent: '*'
+[2021-10-21 08:34:17.964] [exthost] [info] ExtensionService#loadCommonJSModule file:///snap/code/78/usr/share/code/resources/app/extensions/debug-auto-launch/dist/extension
+[2021-10-21 08:34:17.966] [exthost] [info] ExtensionService#_doActivateExtension vscode.git, startup: true, activationEvent: '*', root cause: vscode.github
+[2021-10-21 08:34:17.966] [exthost] [info] ExtensionService#loadCommonJSModule file:///snap/code/78/usr/share/code/resources/app/extensions/git/dist/main
+[2021-10-21 08:34:17.985] [exthost] [info] ExtensionService#_doActivateExtension ms-vscode.cpptools, startup: true, activationEvent: '*'
+[2021-10-21 08:34:17.985] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/christian/.vscode/extensions/ms-vscode.cpptools-1.7.1/dist/main
+[2021-10-21 08:34:18.092] [exthost] [info] ExtensionService#_doActivateExtension vscodevim.vim, startup: true, activationEvent: '*'
+[2021-10-21 08:34:18.092] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/christian/.vscode/extensions/vscodevim.vim-1.21.10/out/extension
+[2021-10-21 08:34:18.211] [exthost] [info] ExtensionService#_doActivateExtension ms-vscode.cmake-tools, startup: true, activationEvent: 'workspaceContains:CMakeLists.txt'
+[2021-10-21 08:34:18.212] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/christian/.vscode/extensions/ms-vscode.cmake-tools-1.9.0/dist/main
+[2021-10-21 08:34:18.771] [exthost] [info] ExtensionService#_doActivateExtension ms-vscode.js-debug, startup: false, activationEvent: 'onCommand:extension.js-debug.clearAutoAttachVariables'
+[2021-10-21 08:34:18.771] [exthost] [info] ExtensionService#loadCommonJSModule file:///snap/code/78/usr/share/code/resources/app/extensions/ms-vscode.js-debug/src/extension.js
+[2021-10-21 08:34:18.869] [exthost] [info] ExtensionService#_doActivateExtension vscode.github, startup: false, activationEvent: '*'
+[2021-10-21 08:34:18.869] [exthost] [info] ExtensionService#loadCommonJSModule file:///snap/code/78/usr/share/code/resources/app/extensions/github/dist/extension.js
+[2021-10-21 08:34:19.025] [exthost] [info] ExtensionService#_doActivateExtension vscode.github-authentication, startup: false, activationEvent: 'onAuthenticationRequest:github'
+[2021-10-21 08:34:19.025] [exthost] [info] ExtensionService#loadCommonJSModule file:///snap/code/78/usr/share/code/resources/app/extensions/github-authentication/dist/extension.js
+[2021-10-21 08:34:27.961] [exthost] [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onStartupFinished'
+[2021-10-21 08:34:27.962] [exthost] [info] ExtensionService#loadCommonJSModule file:///snap/code/78/usr/share/code/resources/app/extensions/emmet/dist/node/emmetNodeMain
+[2021-10-21 08:34:27.968] [exthost] [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+[2021-10-21 08:34:27.968] [exthost] [info] ExtensionService#loadCommonJSModule file:///snap/code/78/usr/share/code/resources/app/extensions/merge-conflict/dist/mergeConflictMain
+[2021-10-21 08:34:41.947] [exthost] [info] ExtensionService#_doActivateExtension vscode.configuration-editing, startup: false, activationEvent: 'onLanguage:json'
+[2021-10-21 08:34:41.948] [exthost] [info] ExtensionService#loadCommonJSModule file:///snap/code/78/usr/share/code/resources/app/extensions/configuration-editing/dist/configurationEditingMain
+[2021-10-21 08:34:41.956] [exthost] [info] ExtensionService#_doActivateExtension vscode.extension-editing, startup: false, activationEvent: 'onLanguage:json'
+[2021-10-21 08:34:41.956] [exthost] [info] ExtensionService#loadCommonJSModule file:///snap/code/78/usr/share/code/resources/app/extensions/extension-editing/dist/extensionEditingMain
+[2021-10-21 08:34:41.962] [exthost] [info] ExtensionService#_doActivateExtension vscode.json-language-features, startup: false, activationEvent: 'onLanguage:json'
+[2021-10-21 08:34:41.962] [exthost] [info] ExtensionService#loadCommonJSModule file:///snap/code/78/usr/share/code/resources/app/extensions/json-language-features/client/dist/node/jsonClientMain
+[2021-10-21 08:34:41.980] [exthost] [info] ExtensionService#_doActivateExtension vscode.npm, startup: false, activationEvent: 'onLanguage:json'
+[2021-10-21 08:34:41.980] [exthost] [info] ExtensionService#loadCommonJSModule file:///snap/code/78/usr/share/code/resources/app/extensions/npm/dist/npmMain
+[2021-10-21 08:34:41.994] [exthost] [info] eager extensions activated
+[2021-10-21 08:34:42.008] [exthost] [info] ExtensionService#_doActivateExtension vscode.typescript-language-features, startup: false, activationEvent: 'onLanguage:jsonc'
+[2021-10-21 08:34:42.009] [exthost] [info] ExtensionService#loadCommonJSModule file:///snap/code/78/usr/share/code/resources/app/extensions/typescript-language-features/dist/extension
+[2021-10-21 08:41:45.237] [exthost] [info] ExtensionService#_doActivateExtension twxs.cmake, startup: false, activationEvent: 'onLanguage:cmake'
+[2021-10-21 08:41:45.237] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/christian/.vscode/extensions/twxs.cmake-0.0.17/out/extension
