@@ -71,7 +71,7 @@ font-4 = Font Awesome 5 Brands:style=Regular:size=10
 modules-left = i3
 modules-right= date 
 
-;tray-position = right
+tray-position = none
 ;tray-padding = 2
 ;tray-background = #0063ff
 
@@ -121,9 +121,9 @@ font-3 = Font Awesome 5 Free Solid:style=Regular:size=10
 font-4 = Font Awesome 5 Brands:style=Regular:size=10
 
 modules-left = i3
-modules-right = network pulseaudio date keyboard
+modules-right = network pulseaudio date 
 
-tray-position = right
+tray-position = none
 tray-padding = 2
 ;tray-background = #0063ff
 
@@ -154,7 +154,7 @@ format-prefix-foreground = ${colors.foreground-alt}
 format-prefix-underline = ${colors.secondary}
 
 label-layout = %layout%
-label-layout-underline = ${colors.secondary}
+#label-layout-underline = ${colors.secondary}
 
 label-indicator-padding = 2
 label-indicator-margin = 1
@@ -280,7 +280,7 @@ format-disconnected =
 type = internal/date
 interval = 1
 
-date = "%A    |    %d.%m.%Y    |    "
+date = "%A | %d.%m.%Y | "
 
 time = %H:%M:%S
 
