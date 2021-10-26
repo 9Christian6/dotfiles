@@ -104,7 +104,7 @@ font-4 = Font Awesome 5 Brands:style=Regular:size=10
 modules-left = i3
 modules-right = network pulseaudio date 
 
-tray-position = none
+tray-position = right
 tray-padding = 2
 ;tray-background = #0063ff
 
