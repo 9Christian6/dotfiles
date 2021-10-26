@@ -307,3 +307,4 @@ bindsym $mod+r mode "resize"
 #}
 exec_always compton -b
 exec_always --no-startup-id $HOME/Bin/PolybarStart
+exec_always --no-startup-id $HOME/Bin/CalendarStart
