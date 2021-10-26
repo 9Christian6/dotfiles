@@ -46,13 +46,13 @@ floating_modifier $mod
 
 # Set background picture and order screens
 exec_always --no-startup-id $HOME/.fehbg
-exec_always ~/.screenlayout/Default.sh
+exec_always --no-startup-id ~/.screenlayout/Default.sh
 
 # Disable mouse focus
 focus_follows_mouse no
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec --no-startup-id i3-sensible-terminal
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -65,29 +65,29 @@ set $inactive-text-color #676E7D
 set $urgent-bg-color     #E53935
 
 # Program Launcher
-bindsym $mod+Shift+d exec rofi -show drun -theme purple -ignored-prefixes 'chrome'
+bindsym $mod+Shift+d exec --no-startup-id rofi -show drun -theme purple -ignored-prefixes 'chrome'
 
 # All Program Launcher
-bindsym $mod+d exec rofi -show drun -theme purple 
+bindsym $mod+d exec --no-startup-id rofi -show drun -theme purple 
 
 # Sound Control
-bindsym $mod+F1 exec amixer -q -D pulse sset Master toggle
-bindsym $mod+F2 exec pactl set-sink-volume @DEFAULT_SINK@ -10%
-bindsym $mod+F3 exec pactl set-sink-volume @DEFAULT_SINK@ +10%
+bindsym $mod+F1 exec --no-startup-id amixer -q -D pulse sset Master toggle
+bindsym $mod+F2 exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10%
+bindsym $mod+F3 exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10%
 
 # Spotify
 
 # play/pause
-bindsym $mod+F6 exec dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause
+bindsym $mod+F6 exec --no-startup-id dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause
 
 # next
-bindsym $mod+F7 exec dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next
+bindsym $mod+F7 exec --no-startup-id dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next
 
 # previous
-bindsym $mod+F5 exec dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous
+bindsym $mod+F5 exec --no-startup-id dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous
 
 # take screenshot
-bindsym $mod+shift+p exec shutter -f
+bindsym $mod+shift+p exec --no-startup-id shutter -f
 
 # change focus
 bindsym $mod+$left focus left
@@ -196,13 +196,13 @@ for_window [class="Pavucontrol"] floating enable
 #go to Coding workspace
 bindsym $mod+Control+space workspace $ws4; workspace $ws1; exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ 1 && $refresh_i3status
 
-exec telegram-desktop
-exec walc
-exec gnome-terminal
-exec spotify
+exec --no-startup-id telegram-desktop
+exec --no-startup-id walc
+exec --no-startup-id gnome-terminal
+exec --no-startup-id spotify
 
 # prevent screen from going into energy save mode
-exec xset -dpms s off
+exec --no-startup-id xset -dpms s off
 
 # switch to workspace
 bindsym $mod+1 workspace number $ws1
@@ -253,7 +253,7 @@ bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart 
 
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+Shift+e exec --no-startup-id "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -305,6 +305,6 @@ bindsym $mod+r mode "resize"
 #		urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
 #	}
 #}
-exec_always compton -b
+exec_always --no-startup-id compton -b
 exec_always --no-startup-id $HOME/Bin/PolybarStart
 exec_always --no-startup-id $HOME/Bin/CalendarStart
