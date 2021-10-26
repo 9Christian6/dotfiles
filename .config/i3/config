@@ -186,12 +186,12 @@ for_window [title="^Factorio$"] move to workspace $ws11
 for_window [title="^PORTAL 2 - OpenGL$"] move to workspace $ws11
 for_window [title="^DARK SOULS III$"] move to workspace $ws11
 for_window [class="mupen64plus"] move to workspace $ws11;
-
 for_window [class="Gnome-calculator"] floating enable
 for_window [class="Shutter"] floating enable
 for_window [class="zoom"] floating enable
 for_window [class="Lutris"] floating enable
 for_window [class="battle.net.exe"] floating enable
+for_window [class="Pavucontrol"] floating enable
 
 #go to Coding workspace
 bindsym $mod+Control+space workspace $ws4; workspace $ws1; exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ 1 && $refresh_i3status

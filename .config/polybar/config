@@ -288,6 +288,13 @@ format-volume = <label-volume> <bar-volume>
 label-volume = VOL %percentage%%
 label-volume-foreground = ${root.foreground}
 
+#change volume on scroll
+scroll-up = pulseaudio-control --volume-max 10 up
+scroll-down = pulseaudio-control --volume-max 10 down
+
+#open audio manager on click
+click-right = exec pavucontrol &
+
 #format-muted = <label-volume> <bar-volume>
 label-muted = VOL %percentage%%
 label-muted-foreground = #666
