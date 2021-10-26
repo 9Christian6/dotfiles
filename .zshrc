@@ -120,6 +120,7 @@ alias dotfileBackup='/usr/bin/git --git-dir=/home/christian/dotfiles/ --work-tre
 alias backup='sudo /bin/grsync'
 alias Backup='sudo /bin/grsync'
 alias config='/usr/bin/git --git-dir=$HOME/dotfiles --work-tree=$HOME'
+alias sudoconfig='sudo /usr/bin/git --git-dir=$HOME/dotfiles --work-tree=$HOME'
 alias ccc='/home/christian/Desktop/Bachelor-Arbeit/build/ccc'
 alias listDisks='sudo fdisk -l | grep -i /dev/sd'
 alias lgrep='la | grep'
