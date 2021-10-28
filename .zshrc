@@ -128,6 +128,8 @@ alias vim='nvim'
 alias zshrc='nvim $HOME/.zshrc && source $HOME/.zshrc'
 alias :q='exit'
 alias :wq='exit'
+alias editi3='vim $HOME/.config/i3/config'
+alias editPolybar='vim $HOME/.config/polybar/config'
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
