@@ -70,6 +70,9 @@ bindsym $mod+Shift+d exec --no-startup-id rofi -show drun -theme purple -ignored
 # All Program Launcher
 bindsym $mod+d exec --no-startup-id rofi -show drun -theme purple 
 
+#Make shortcut for emojipicker
+bindsym $mod+Shift+t exec ~/Opt/emojipick/emojipick
+
 # Sound Control
 bindsym $mod+F1 exec --no-startup-id amixer -q -D pulse sset Master toggle
 bindsym $mod+F2 exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10%
@@ -114,7 +117,7 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # toggle horizontal and vertical split
-bindsym $mod+x split toggle
+bindsym $mod+x split toggle; border none
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
@@ -171,7 +174,7 @@ assign [class="walc"] $ws2
 assign [class="Gnome-terminal"] $ws4
 for_window [class="Spotify"] move to workspace $ws5
 assign [class="Steam"] $ws8
-assign [class="heroic"] $ws11
+assign [class="heroic"] $ws8
 assign [class="discord"] $ws9
 assign [class="Microsoft Teams - Preview"] $ws10
 assign [class="explorer.exe"] $ws11
@@ -186,6 +189,7 @@ for_window [title="^Factorio$"] move to workspace $ws11
 for_window [title="^PORTAL 2 - OpenGL$"] move to workspace $ws11
 for_window [title="^DARK SOULS III$"] move to workspace $ws11
 for_window [class="mupen64plus"] move to workspace $ws11;
+for_window [instance="\b(\w*chromecalendar\w*)\b"] move to workspace $ws10
 for_window [class="Gnome-calculator"] floating enable
 for_window [class="Shutter"] floating enable
 for_window [class="zoom"] floating enable
@@ -307,4 +311,3 @@ bindsym $mod+r mode "resize"
 #}
 exec_always --no-startup-id compton -b
 exec_always --no-startup-id $HOME/Bin/PolybarStart
-exec_always --no-startup-id $HOME/Bin/CalendarStart
