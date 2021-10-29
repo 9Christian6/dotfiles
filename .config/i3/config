@@ -71,7 +71,7 @@ bindsym $mod+Shift+d exec --no-startup-id rofi -show drun -theme purple -ignored
 bindsym $mod+d exec --no-startup-id rofi -show drun -theme purple 
 
 #Make shortcut for emojipicker
-bindsym $mod+Shift+t exec ~/Opt/emojipick/emojipick
+bindsym $mod+Shift+y exec ~/Opt/emojipick/emojipick
 
 # Sound Control
 bindsym $mod+F1 exec --no-startup-id amixer -q -D pulse sset Master toggle
@@ -309,5 +309,8 @@ bindsym $mod+r mode "resize"
 #		urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
 #	}
 #}
+
+#Startup
+exec_always --no-startup-id discord
 exec_always --no-startup-id compton -b
 exec_always --no-startup-id $HOME/Bin/PolybarStart

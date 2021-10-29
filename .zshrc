@@ -130,6 +130,7 @@ alias :q='exit'
 alias :wq='exit'
 alias editi3='vim $HOME/.config/i3/config'
 alias editPolybar='vim $HOME/.config/polybar/config'
+alias search='function _blah(){la | grep $1; };_blah'
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
