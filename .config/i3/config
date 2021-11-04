@@ -65,10 +65,10 @@ set $inactive-text-color #676E7D
 set $urgent-bg-color     #E53935
 
 # Program Launcher
-bindsym $mod+Shift+d exec --no-startup-id rofi -show drun -theme purple -ignored-prefixes 'chrome'
+bindsym $mod+Shift+d exec --no-startup-id rofi -show drun -ignored-prefixes 'chrome'
 
 # All Program Launcher
-bindsym $mod+d exec --no-startup-id rofi -show drun -theme purple 
+bindsym $mod+d exec --no-startup-id rofi -show drun 
 
 #Make shortcut for emojipicker
 bindsym $mod+Shift+y exec ~/Opt/emojipick/emojipick
