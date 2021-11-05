@@ -1,16 +1,16 @@
 configuration {
-	modi: "combi";
-	width: 80;
-	lines: 5;
-/*	columns: 1;*/
-	font: "System San Francisco Display 12";
-/*	bw: 1;*/
-/*	location: 0;*/
-	padding: 10;
+modi: "drun";
+width: 50;
+lines: 15;
+columns: 1;
+font: "mono 12";
+bw: 1;
+location: 0;
+padding: 5;
 /*	yoffset: 0;*/
 /*	xoffset: 0;*/
 /*	fixed-num-lines: true;*/
-	show-icons: true;
+show-icons: true;
 /*	terminal: "rofi-sensible-terminal";*/
 /*	ssh-client: "ssh";*/
 /*	ssh-command: "{terminal} -e {ssh-client} {host} [-p {port}]";*/
@@ -19,7 +19,7 @@ configuration {
 /*	run-shell-command: "{terminal} -e {cmd}";*/
 /*	window-command: "wmctrl -i -R {window}";*/
 /*	window-match-fields: "all";*/
-/*	icon-theme: ;*/
+icon-theme: "Papirus";
 /*	drun-match-fields: "name,generic,exec,categories,keywords";*/
 /*	drun-categories: ;*/
 /*	drun-show-actions: false;*/
@@ -30,32 +30,32 @@ configuration {
 /*	sort: false;*/
 /*	sorting-method: "normal";*/
 /*	case-sensitive: false;*/
-	cycle: true;
+/*	cycle: true;*/
 /*	sidebar-mode: false;*/
 /*	eh: 1;*/
 /*	auto-select: false;*/
 /*	parse-hosts: false;*/
 /*	parse-known-hosts: true;*/
 /*	combi-modi: "window,run";*/
-	matching: "regex";
+/*	matching: "normal";*/
 /*	tokenize: true;*/
 /*	m: "-5";*/
-	line-margin: 5;
-	line-padding: 5;
+/*	line-margin: 2;*/
+/*	line-padding: 1;*/
 /*	filter: ;*/
-	separator-style: "none";
-	hide-scrollbar: true;
+/*	separator-style: "dash";*/
+/*	hide-scrollbar: false;*/
 /*	fullscreen: false;*/
-	fake-transparency: true;
+fake-transparency: true;
 /*	dpi: -1;*/
 /*	threads: 0;*/
 /*	scrollbar-width: 8;*/
 /*	scroll-method: 0;*/
-	fake-background: "screenshot";
+fake-background: "screenshot";
 /*	window-format: "{w}    {c}   {t}";*/
 /*	click-to-exit: true;*/
 /*	show-match: true;*/
-	theme: "arthur";
+theme: "DarkBlue.rasi";
 /*	color-normal: ;*/
 /*	color-urgent: ;*/
 /*	color-active: ;*/
@@ -68,7 +68,7 @@ configuration {
 /*	drun-use-desktop-cache: false;*/
 /*	drun-reload-desktop-cache: false;*/
 /*	normalize-match: false;*/
-/*	pid: "/run/user/1000/rofi.pid";*/
+/*	pid: "/root/.cache/rofi.pid";*/
 /*	display-window: ;*/
 /*	display-windowcd: ;*/
 /*	display-run: ;*/
@@ -128,7 +128,7 @@ configuration {
 /*	kb-custom-13: "Alt+numbersign";*/
 /*	kb-custom-14: "Alt+dollar";*/
 /*	kb-custom-15: "Alt+percent";*/
-/*	kb-custom-16 "Alt+dead_circumflex";*/
+/*kb-custom-16: "Alt+dead_circumflex";*/
 /*	kb-custom-17: "Alt+ampersand";*/
 /*	kb-custom-18: "Alt+asterisk";*/
 /*	kb-custom-19: "Alt+parenleft";*/
@@ -150,3 +150,4 @@ configuration {
 /*	me-accept-entry: "MouseDPrimary";*/
 /*	me-accept-custom: "Control+MouseDPrimary";*/
 }
+	
