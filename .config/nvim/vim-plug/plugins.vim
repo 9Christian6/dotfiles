@@ -18,4 +18,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'codota/TabNine'
     " Writing with sudo permissions
     Plug 'lambdalisue/suda.vim'
+    " Color Highlighting
+    Plug 'chrisbra/Colorizer'
 call plug#end()
