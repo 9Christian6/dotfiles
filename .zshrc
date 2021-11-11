@@ -118,8 +118,6 @@ alias cls="clear && cd ~"
 alias config='/usr/bin/git --git-dir=/home/christian/dotfiles/ --work-tree=/home/christian'
 alias dotfileBackup='/usr/bin/git --git-dir=/home/christian/dotfiles/ --work-tree=/home/christian'
 alias sudoDotfileBackup='sudo /usr/bin/git --git-dir=/home/christian/dotfiles/ --work-tree=/home/christian'
-alias backup='sudo /bin/grsync'
-alias Backup='sudo /bin/grsync'
 alias sudoconfig='sudo /usr/bin/git --git-dir=$HOME/dotfiles --work-tree=$HOME'
 alias ccc='/home/christian/Desktop/Bachelor-Arbeit/build/ccc'
 alias listDisks='sudo fdisk -l | grep -i /dev/sd'
@@ -134,6 +132,7 @@ alias editzsh='vim $HOME/.zshrc && source $HOME/.zshrc'
 alias search='function _blah(){la | grep -i $1; };_blah'
 alias clearmake='clear && make'
 alias aptUpdate='sudo apt-get update && sudo apt-get upgrade'
+alias clearmakerun='clear && make && ccc'
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

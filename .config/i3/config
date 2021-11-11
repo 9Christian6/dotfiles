@@ -180,7 +180,6 @@ assign [class="Microsoft Teams - Preview"] $ws10
 assign [class="explorer.exe"] $ws11
 assign [class="leagueclient.exe"] $ws11
 assign [class="leagueclientux.exe"] $ws11
-assign [class="Wine"] $ws11
 assign [class="league of legends.exe"] $ws11
 assign [class="leagueclient.exe"] $ws11
 for_window [title="^Sekiro$"] move to workspace $ws11
