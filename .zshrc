@@ -112,6 +112,7 @@ export EDITOR='nvim'
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+alias Backup='sudo rsnapshot -v alpha'
 alias la="ls -a"
 alias cl="clear"
 alias cls="clear && cd ~"
@@ -136,3 +137,4 @@ alias clearmakerun='clear && make && ccc'
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+alias open=xdg-open

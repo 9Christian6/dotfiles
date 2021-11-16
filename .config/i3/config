@@ -182,6 +182,7 @@ assign [class="leagueclient.exe"] $ws11
 assign [class="leagueclientux.exe"] $ws11
 assign [class="league of legends.exe"] $ws11
 assign [class="leagueclient.exe"] $ws11
+assign [class="Code"] $ws1
 for_window [title="^Sekiro$"] move to workspace $ws11
 for_window [title="^Celeste$"] move to workspace $ws11
 for_window [title="^Factorio$"] move to workspace $ws11
