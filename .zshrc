@@ -138,3 +138,5 @@ alias clearmakerun='clear && make && ccc'
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 alias open=xdg-open
+alias tetris='vitetris'
+alias DS='flatpak run org.desmume.DeSmuME'
