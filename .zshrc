@@ -115,6 +115,7 @@ export EDITOR='nvim'
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+#aliases
 alias Backup='sudo rsnapshot -v alpha'
 alias la="ls -a"
 alias cl="clear"
@@ -133,12 +134,14 @@ alias :wq='exit'
 alias editi3='vim $HOME/.config/i3/config'
 alias editPolybar='vim $HOME/.config/polybar/config'
 alias editzsh='vim $HOME/.zshrc && source $HOME/.zshrc'
-alias search='function _blah(){la | grep -i $1; };_blah'
 alias clearmake='clear && make'
+alias cleanmake='make clean && make'
 alias aptUpdate='sudo apt-get update && sudo apt-get upgrade'
 alias clearmakerun='clear && make && ccc'
-alias addToFile='function _add(){echo "$1" >> $2; };_add'
 alias open=xdg-open
 alias tetris='vitetris'
 alias DS='flatpak run org.desmume.DeSmuME'
 alias makerun='make && ccc'
+#functions
+function addAlias(){echo "alias $1='$2'" >> ~/.zshrc; }
+function search(){la | grep -i $1}
