@@ -11,6 +11,9 @@ fi
 # Path to your oh-my-zsh installation.
 export ZSH="/home/christian/.oh-my-zsh"
 
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -134,9 +137,8 @@ alias search='function _blah(){la | grep -i $1; };_blah'
 alias clearmake='clear && make'
 alias aptUpdate='sudo apt-get update && sudo apt-get upgrade'
 alias clearmakerun='clear && make && ccc'
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+alias addToFile='function _add(){echo "$1" >> $2; };_add'
 alias open=xdg-open
 alias tetris='vitetris'
 alias DS='flatpak run org.desmume.DeSmuME'
+alias makerun='make && ccc'
