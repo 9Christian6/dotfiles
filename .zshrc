@@ -145,3 +145,4 @@ alias makerun='make && ccc'
 #functions
 function addAlias(){echo "alias $1='$2'" >> ~/.zshrc; }
 function search(){la | grep -i $1}
+function showInstalled(){dpkg --list "*$1*"}
