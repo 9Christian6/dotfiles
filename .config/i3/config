@@ -199,6 +199,7 @@ for_window [class="zoom"] floating enable
 for_window [class="Lutris"] floating enable
 for_window [class="battle.net.exe"] floating enable
 for_window [class="Pavucontrol"] floating enable
+for_window [class="Desmume"] floating enable
 
 #go to Coding workspace
 bindsym $mod+Control+space workspace $ws4; workspace $ws1; exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ 1 && $refresh_i3status
