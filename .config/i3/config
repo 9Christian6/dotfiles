@@ -190,6 +190,7 @@ for_window [title="^Sekiro$"] move to workspace $ws11
 for_window [title="^Celeste$"] move to workspace $ws11
 for_window [title="^Factorio$"] move to workspace $ws11
 for_window [title="^PORTAL 2 - OpenGL$"] move to workspace $ws11
+for_window [title="^MONSTER HUNTER: WORLD$"] move to workspace $ws11
 for_window [title="^DARK SOULS III$"] move to workspace $ws11
 for_window [class="mupen64plus"] move to workspace $ws11;
 for_window [instance="\b(\w*chromecalendar\w*)\b"] move to workspace $ws10
