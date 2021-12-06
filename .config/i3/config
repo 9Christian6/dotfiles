@@ -175,6 +175,7 @@ workspace $ws11 output DP-2
 assign [class="TelegramDesktop"] $ws2
 assign [class="walc"] $ws2
 assign [class="Gnome-terminal"] $ws4
+for_window [class="Gnome-terminal"] focus_on_window_activation none
 for_window [class="Spotify"] move to workspace $ws5
 assign [class="Steam"] $ws8
 assign [class="heroic"] $ws8
@@ -316,7 +317,7 @@ bindsym $mod+r mode "resize"
 #}
 
 #Startup
-exec_always --no-startup-id discord
+exec_always --no-startup-id $HOME/Opt/StartDiscord
 exec_always --no-startup-id compton -b
 exec_always --no-startup-id $HOME/Bin/PolybarStart
 exec_always --no-startup-id ~/.i3/i3-chrome-tab-dragging.py
