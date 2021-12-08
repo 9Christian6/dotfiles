@@ -44,10 +44,6 @@ mode "$mode_gaps" {
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
-# Set background picture and order screens
-exec_always --no-startup-id $HOME/.fehbg
-exec_always --no-startup-id ~/.screenlayout/Default.sh
-
 # Disable mouse focus
 focus_follows_mouse no
 
@@ -175,7 +171,6 @@ workspace $ws11 output DP-2
 assign [class="TelegramDesktop"] $ws2
 assign [class="walc"] $ws2
 assign [class="Gnome-terminal"] $ws4
-for_window [class="Gnome-terminal"] focus_on_window_activation none
 for_window [class="Spotify"] move to workspace $ws5
 assign [class="Steam"] $ws8
 assign [class="heroic"] $ws8
@@ -205,14 +200,6 @@ for_window [class="Desmume"] floating enable
 
 #go to Coding workspace
 bindsym $mod+Control+space workspace $ws4; workspace $ws1; exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ 1 && $refresh_i3status
-
-exec --no-startup-id telegram-desktop
-exec --no-startup-id walc
-exec --no-startup-id gnome-terminal
-exec --no-startup-id spotify
-
-# prevent screen from going into energy save mode
-exec --no-startup-id xset -dpms s off
 
 # switch to workspace
 bindsym $mod+1 workspace number $ws1
@@ -316,8 +303,22 @@ bindsym $mod+r mode "resize"
 #	}
 #}
 
+# Set background picture and order screens
+exec_always --no-startup-id $HOME/.fehbg
+exec_always --no-startup-id ~/.screenlayout/Default.sh
+
 #Startup
-exec_always --no-startup-id $HOME/Opt/StartDiscord
 exec_always --no-startup-id compton -b
+exec_always --no-startup-id $HOME/Opt/StartDiscord
 exec_always --no-startup-id $HOME/Bin/PolybarStart
 exec_always --no-startup-id ~/.i3/i3-chrome-tab-dragging.py
+exec --no-startup-id telegram-desktop
+exec --no-startup-id walc
+exec --no-startup-id i3-sensible-terminal
+exec --no-startup-id spotify
+
+#remove urgency color
+exec $HOME/Opt/removeUrgency
+
+# prevent screen from going into energy save mode
+exec --no-startup-id xset -dpms s off
