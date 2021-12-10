@@ -168,10 +168,11 @@ workspace $ws9 output DVI-D-0
 workspace $ws10 output DVI-D-0
 workspace $ws11 output DP-2
 
+#Workspace assignments
+
 assign [class="TelegramDesktop"] $ws2
 assign [class="walc"] $ws2
 assign [class="Gnome-terminal"] $ws4
-for_window [class="Spotify"] move to workspace $ws5
 assign [class="Steam"] $ws8
 assign [class="heroic"] $ws8
 assign [class="discord"] $ws9
@@ -182,14 +183,15 @@ assign [class="leagueclientux.exe"] $ws11
 assign [class="league of legends.exe"] $ws11
 assign [class="leagueclient.exe"] $ws11
 assign [class="Code"] $ws1
+for_window [class="Spotify"] move to workspace $ws5
 for_window [title="^Sekiro$"] move to workspace $ws11
 for_window [title="^Celeste$"] move to workspace $ws11
 for_window [title="^Factorio$"] move to workspace $ws11
 for_window [title="^PORTAL 2 - OpenGL$"] move to workspace $ws11
 for_window [title="^MONSTER HUNTER: WORLD$"] move to workspace $ws11
 for_window [title="^DARK SOULS III$"] move to workspace $ws11
-for_window [class="mupen64plus"] move to workspace $ws11;
-for_window [instance="\b(\w*chromecalendar\w*)\b"] move to workspace $ws10
+for_window [class="mupen64plus"] move to workspace $ws11
+
 for_window [class="Gnome-calculator"] floating enable
 for_window [class="Shutter"] floating enable
 for_window [class="zoom"] floating enable
@@ -309,8 +311,11 @@ exec_always --no-startup-id ~/.screenlayout/Default.sh
 
 #Startup
 exec_always --no-startup-id compton -b
-exec_always --no-startup-id $HOME/Opt/StartDiscord
+exec_always --no-startup-id $HOME/Bin/StartDiscord
 exec_always --no-startup-id $HOME/Bin/PolybarStart
+exec --no-startup-id $HOME/Bin/Mails
+exec --no-startup-id $HOME/Bin/Calendar
+
 exec_always --no-startup-id ~/.i3/i3-chrome-tab-dragging.py
 exec --no-startup-id telegram-desktop
 exec --no-startup-id walc
@@ -318,7 +323,7 @@ exec --no-startup-id i3-sensible-terminal
 exec --no-startup-id spotify
 
 #remove urgency color
-exec $HOME/Opt/removeUrgency
+exec $HOME/Bin/removeUrgency
 
 # prevent screen from going into energy save mode
 exec --no-startup-id xset -dpms s off
