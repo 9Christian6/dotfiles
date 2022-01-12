@@ -66,11 +66,10 @@ bindsym $mod+Shift+d exec --no-startup-id rofi -show run -ignored-prefixes 'chro
 # Program Launcher
 bindsym $mod+d exec --no-startup-id rofi -show drun -ignored-prefixes 'chrome'
 
-#Make shortcut for emojipicker
+#Shortcuts
 bindsym $mod+Shift+y exec ~/Opt/emojipick/emojipick
-
-#Make shortcut to lock
 bindsym $mod+a exec /home/christian/Bin/Lock
+bindsym $mod+c exec google-chrome
 
 # Sound Control
 bindsym $mod+F1 exec --no-startup-id amixer -q -D pulse sset Master toggle
