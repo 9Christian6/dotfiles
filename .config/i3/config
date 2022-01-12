@@ -313,8 +313,8 @@ exec_always --no-startup-id ~/.screenlayout/Default.sh
 exec_always --no-startup-id compton -b
 exec_always --no-startup-id $HOME/Bin/StartDiscord
 exec_always --no-startup-id $HOME/Bin/PolybarStart
-exec --no-startup-id $HOME/Bin/Mails
-exec --no-startup-id $HOME/Bin/Calendar
+#exec --no-startup-id $HOME/Bin/Mails
+#exec --no-startup-id $HOME/Bin/CalendarTest
 
 exec_always --no-startup-id ~/.i3/i3-chrome-tab-dragging.py
 exec --no-startup-id telegram-desktop
