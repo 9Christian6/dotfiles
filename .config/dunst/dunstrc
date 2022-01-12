@@ -309,7 +309,7 @@
     #icon = /path/to/icon
 
 [urgency_normal]
-    background = "#0000aa"
+    background = "#2121cf"
     foreground = "#f0f0f0"
     #frame_color = "#333333"
     frame_color = "#bfdce8"
