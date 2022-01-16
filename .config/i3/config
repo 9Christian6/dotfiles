@@ -331,8 +331,6 @@ exec --no-startup-id spotify
 exec --no-startup-id i3-msg '$workspace 4; exec i3-sensible-terminal'
 exec --no-startup-id google-chrome --app="https://calendar.google.com"
 exec --no-startup-id $HOME/Bin/Mails
-#exec_always --no-startup-id google-chrome --app="https://webmail.uni-saarland.de/imp/dynamic.php?page=mailbox"
-#exec_always --no-startup-id google-chrome --app="https://mail.google.com/mail/u/0/#inbox"
 
 
 #remove urgency color
