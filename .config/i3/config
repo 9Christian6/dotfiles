@@ -166,6 +166,9 @@ workspace $ws8 output DVI-D-0
 workspace $ws9 output DVI-D-0
 workspace $ws10 output DVI-D-0
 workspace $ws11 output DP-2
+workspace $ws12 output DP-2
+workspace $ws13 output DP-2
+
 
 #Workspace assignments
 
@@ -182,6 +185,9 @@ assign [class="leagueclientux.exe"] $ws11
 assign [class="league of legends.exe"] $ws11
 assign [class="leagueclient.exe"] $ws11
 assign [class="Code"] $ws1
+assign [class="Google-chrome" instance="calendar.google.com"] $ws13
+assign [class="Google-chrome" instance="webmail.uni-saarland.de__imp_dynamic.php"] $ws12
+assign [class="Google-chrome" instance="mail.google.com__mail_u_0"] $ws12
 for_window [class="Spotify"] move to workspace $ws5
 for_window [title="^Sekiro$"] move to workspace $ws11
 for_window [title="^Celeste$"] move to workspace $ws11
@@ -316,17 +322,21 @@ exec_always --no-startup-id ~/.screenlayout/Default.sh
 exec_always --no-startup-id compton -b
 exec_always --no-startup-id $HOME/Bin/StartDiscord
 exec_always --no-startup-id $HOME/Bin/PolybarStart
-#exec --no-startup-id $HOME/Bin/Mails
-#exec --no-startup-id $HOME/Bin/CalendarTest
 
 exec_always --no-startup-id ~/.i3/i3-chrome-tab-dragging.py
 exec --no-startup-id telegram-desktop
 exec --no-startup-id walc
 exec --no-startup-id i3-sensible-terminal
 exec --no-startup-id spotify
+exec --no-startup-id i3-msg '$workspace 4; exec i3-sensible-terminal'
+exec --no-startup-id google-chrome --app="https://calendar.google.com"
+exec --no-startup-id $HOME/Bin/Mails
+#exec_always --no-startup-id google-chrome --app="https://webmail.uni-saarland.de/imp/dynamic.php?page=mailbox"
+#exec_always --no-startup-id google-chrome --app="https://mail.google.com/mail/u/0/#inbox"
+
 
 #remove urgency color
-exec $HOME/Bin/removeUrgency
+exec_always $HOME/Bin/removeUrgency
 
 # prevent screen from going into energy save mode
 exec --no-startup-id xset -dpms s off

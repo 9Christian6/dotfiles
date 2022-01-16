@@ -143,6 +143,7 @@ alias tetris='vitetris'
 alias DS='flatpak run org.desmume.DeSmuME'
 alias makerun='make && ccc'
 alias scriptBackup='/usr/bin/git --git-dir=/home/christian/scripts/ --work-tree=/home/christian'
+alias vifm='$HOME/.config/vifm/scripts/vifmrun'
 #functions
 function addAlias(){echo "alias $1='$2'" >> ~/.zshrc; }
 function search(){la | grep -i $1}
