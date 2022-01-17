@@ -170,10 +170,12 @@ command! extract! extract -f %a %f %n
 " You can also add %CLEAR if you want to clear screen before running FUSE
 " program.
 
+" PDF
 fileviewer *.pdf
     \ vifmimg pdf %px %py %pw %ph %c
     \ %pc
     \ vifmimg clear
+filetype *.pdf evince &
 
 fileviewer *.djvu
     \ vifmimg djvu %px %py %pw %ph %c

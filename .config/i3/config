@@ -70,6 +70,8 @@ bindsym $mod+d exec --no-startup-id rofi -show drun -ignored-prefixes 'chrome'
 bindsym $mod+Shift+y exec ~/Opt/emojipick/emojipick
 bindsym $mod+a exec /home/christian/Bin/Lock
 bindsym $mod+c exec google-chrome
+bindsym $mod+y exec google-chrome www.youtube.com --new-window
+bindsym $mod+t exec google-chrome www.twitch.tv --new-window
 
 # Sound Control
 bindsym $mod+F1 exec --no-startup-id amixer -q -D pulse sset Master toggle
@@ -174,6 +176,7 @@ workspace $ws13 output DP-2
 
 assign [class="TelegramDesktop"] $ws2
 assign [class="walc"] $ws2
+no_focus [class="walc"]
 assign [class="Gnome-terminal"] $ws4
 assign [class="Steam"] $ws8
 assign [class="heroic"] $ws8
@@ -329,7 +332,8 @@ exec --no-startup-id walc
 exec --no-startup-id i3-sensible-terminal
 exec --no-startup-id spotify
 exec --no-startup-id i3-msg '$workspace 4; exec i3-sensible-terminal'
-exec --no-startup-id google-chrome --app="https://calendar.google.com"
+#exec --no-startup-id google-chrome --app="https://calendar.google.com"
+exec --no-startup-id $HOME/Bin/Calendar
 exec --no-startup-id $HOME/Bin/Mails
 
 
