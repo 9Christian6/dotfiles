@@ -255,7 +255,9 @@ bindsym $mod+Shift+Control+9 move container to workspace number $ws19
 
 #move workspaces between monitors
 bindsym $mod+Shift+Control+h move workspace to output left
+bindsym $mod+Shift+Control+Left move workspace to output left
 bindsym $mod+Shift+Control+l move workspace to output right
+bindsym $mod+Shift+Control+Right move workspace to output right
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
