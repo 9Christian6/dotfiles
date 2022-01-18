@@ -120,6 +120,7 @@ alias Backup='sudo rsnapshot -v alpha'
 alias la="ls -a"
 alias cl="clear"
 alias cls="clear && cd ~"
+alias cla="clear && la"
 alias config='/usr/bin/git --git-dir=/home/christian/dotfiles/ --work-tree=/home/christian'
 alias dotfileBackup='/usr/bin/git --git-dir=/home/christian/dotfiles/ --work-tree=/home/christian'
 alias sudoDotfileBackup='sudo /usr/bin/git --git-dir=/home/christian/dotfiles/ --work-tree=/home/christian'
