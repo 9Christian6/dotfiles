@@ -41,8 +41,8 @@ border-color = #00000000
 padding-left = 0
 padding-right = 0
 
-module-margin-left = 10
-module-margin-right = 0
+module-margin-left = 1
+module-margin-right = 2
 
 font-0 = fixed:pixelsize=10;1
 font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
@@ -51,7 +51,7 @@ font-3 = Font Awesome 5 Free Solid:style=Regular:size=10
 font-4 = Font Awesome 5 Brands:style=Regular:size=10
 
 modules-left = i3
-modules-right= date 
+modules-right= spotify previous playpause next date 
 
 tray-position = none
 ;tray-padding = 2
@@ -104,7 +104,7 @@ font-3 = Font Awesome 5 Free Solid:style=Regular:size=10
 font-4 = Font Awesome 5 Brands:style=Regular:size=10
 
 modules-left = i3
-modules-right = spotify previous playpause next network pulseaudio date 
+modules-right = network pulseaudio date 
 
 tray-position = right
 tray-padding = 2
@@ -274,12 +274,10 @@ interval = 0.5
 [module/date]
 type = internal/date
 interval = 1
-
 date = "%A | %d.%m.%Y | "
-
 time = %H:%M:%S
-
 #format-prefix = 
+format-suffix = " | "
 format-prefix-foreground = ${colors.foreground-alt}
 #format-underline = #0a6cf5
 
@@ -289,6 +287,8 @@ label = %date% %time%
 type = internal/pulseaudio
 
 format-volume = <label-volume> <bar-volume>
+format-volume-prefix = " |  "
+format-volume-suffix = "  | "
 label-volume = VOL %percentage%%
 label-volume-foreground = ${root.foreground}
 
@@ -372,7 +372,9 @@ menu-2-1-exec = menu-open-0
 type = internal/network
 interface = enp0s25 
 interval = 1.0
-label-connected = "  %downspeed%   %upspeed%  "
+label-connected = "%downspeed%   %upspeed%"
+label-connected-alignment = right
+label-connected-minlen = 10
 label-disconnected = disconnected
 
 [module/previous]
