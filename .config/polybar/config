@@ -104,7 +104,7 @@ font-3 = Font Awesome 5 Free Solid:style=Regular:size=10
 font-4 = Font Awesome 5 Brands:style=Regular:size=10
 
 modules-left = i3
-modules-right = network spotify previous playpause next pulseaudio date 
+modules-right = spotify previous playpause next network pulseaudio date 
 
 tray-position = right
 tray-padding = 2
@@ -260,12 +260,12 @@ type = internal/network
 interface = enp0s31f6
 interval = 0.5
 
-format-connected-underline = #55aa55
-#format-connected-prefix = " "
-format-connected-prefix-foreground = ${colors.foreground-alt}
-label-connected = %local_ip%
+#format-connected-underline = #55aa55
+#format-connected-prefix = ""
+#format-connected-prefix-foreground = ${colors.foreground-alt}
+#label-connected = %local_ip%
 
-format-disconnected =
+#format-disconnected =
 ;format-disconnected = <label-disconnected>
 ;format-disconnected-underline = ${self.format-connected-underline}
 ;label-disconnected = %ifname% disconnected
@@ -391,7 +391,7 @@ format-font = 2
 ; Default
 hook-0 = echo ""
 ; When spotify active
-hook-1 = echo ""
+hook-1 = echo "  |"
 click-left = "spotifyctl -q next"
 
 
@@ -412,7 +412,7 @@ type = custom/ipc
 ; Default
 hook-0 = echo ""
 ; Playing/paused show song name and artist
-hook-1 = spotifyctl -q status --format '%artist%: %title%'
+hook-1 = spotifyctl -q status --format '%artist%: %title%  |'
 
 [settings]
 screenchange-reload = true
