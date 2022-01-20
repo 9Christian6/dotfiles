@@ -274,11 +274,10 @@ interval = 0.5
 [module/date]
 type = internal/date
 interval = 1
-date = "%A | %d.%m.%Y | "
-time = %H:%M:%S
-#format-prefix = 
+date = "%A |  %d.%m.%Y | "
+time =  %H:%M:%S
 format-suffix = " | "
-format-prefix-foreground = ${colors.foreground-alt}
+#format-prefix-foreground = ${colors.foreground-alt}
 #format-underline = #0a6cf5
 
 label = %date% %time%
@@ -287,8 +286,8 @@ label = %date% %time%
 type = internal/pulseaudio
 
 format-volume = <label-volume> <bar-volume>
-format-volume-prefix = " |  "
-format-volume-suffix = "  | "
+format-volume-prefix = "| "
+format-volume-suffix = " |"
 label-volume = VOL %percentage%%
 label-volume-foreground = ${root.foreground}
 
@@ -373,8 +372,9 @@ type = internal/network
 interface = enp0s25 
 interval = 1.0
 label-connected = "%downspeed%   %upspeed%"
-label-connected-alignment = right
-label-connected-minlen = 10
+label-connected-alignment = left
+label-connected-minlen = 20
+label-connected-maxlen = 20
 label-disconnected = disconnected
 
 [module/previous]
