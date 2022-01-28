@@ -51,7 +51,7 @@ font-3 = Font Awesome 5 Free Solid:style=Regular:size=10
 font-4 = Font Awesome 5 Brands:style=Regular:size=10
 
 modules-left = i3
-modules-right= spotify previous playpause next date 
+modules-right= spotify previous playpause next day date time 
 
 tray-position = none
 ;tray-padding = 2
@@ -104,10 +104,10 @@ font-3 = Font Awesome 5 Free Solid:style=Regular:size=10
 font-4 = Font Awesome 5 Brands:style=Regular:size=10
 
 modules-left = i3
-modules-right = network pulseaudio date 
+modules-right = network cpu pulseaudio day date time
 
-tray-position = right
-tray-padding = 2
+;tray-position = right
+;tray-padding = 2
 ;tray-background = #0063ff
 
 ;wm-restack = bspwm
@@ -241,10 +241,12 @@ card = intel_backlight
 
 [module/cpu]
 type = internal/cpu
-interval = 2
-#format-prefix = " "
-format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #f90000
+interval = 0.5
+#format-prefix = "|   "
+format-suffix = "   |"
+#format-suffix = " | "
+#format-prefix-foreground = ${colors.foreground-alt}
+#format-underline = #f90000
 label = %percentage:2%%
 
 [module/memory]
@@ -271,23 +273,40 @@ interval = 0.5
 ;label-disconnected = %ifname% disconnected
 ;label-disconnected-foreground = ${colors.foreground-alt}
 
+[module/time]
+type = internal/date
+interval = 1
+time =  %H:%M:%S
+label = %time%
+#format-prefix = "|   "
+#format-suffix = "   |"
+
 [module/date]
 type = internal/date
 interval = 1
-date = "%A |  %d.%m.%Y | "
-time =  %H:%M:%S
-format-suffix = " | "
+date = " %d.%m.%Y"
+#time =  %H:%M:%S
+label = %date%
+#format-prefix = "|   "
+format-suffix = "   |"
+#format-suffix = " | "
 #format-prefix-foreground = ${colors.foreground-alt}
 #format-underline = #0a6cf5
 
-label = %date% %time%
+[module/day]
+type = internal/date
+interval = 1
+date = "%A"
+label = %date%
+#format-prefix = "|   "
+format-suffix = "   |"
 
 [module/pulseaudio]
 type = internal/pulseaudio
 
 format-volume = <label-volume> <bar-volume>
-format-volume-prefix = "| "
-format-volume-suffix = " |"
+#format-volume-prefix = "|   "
+format-volume-suffix = "   |"
 label-volume = VOL %percentage%%
 label-volume-foreground = ${root.foreground}
 
@@ -371,17 +390,20 @@ menu-2-1-exec = menu-open-0
 type = internal/network
 interface = enp0s25 
 interval = 1.0
+
 label-connected = "%downspeed%   %upspeed%"
-label-connected-alignment = left
+label-connected-alignment = right
 label-connected-minlen = 20
 label-connected-maxlen = 20
 label-disconnected = disconnected
+format-connected-suffix = "  |"
+
 
 [module/previous]
 type = custom/ipc
 format-font = 2
 ; Default
-hook-0 = echo ""
+hook-0 = echo """
 ; When spotify active
 hook-1 = echo ""
 click-left = "spotifyctl -q previous"
@@ -393,7 +415,7 @@ format-font = 2
 ; Default
 hook-0 = echo ""
 ; When spotify active
-hook-1 = echo "  |"
+hook-1 = echo " "
 click-left = "spotifyctl -q next"
 
 
@@ -414,7 +436,7 @@ type = custom/ipc
 ; Default
 hook-0 = echo ""
 ; Playing/paused show song name and artist
-hook-1 = spotifyctl -q status --format '%artist%: %title%  |'
+hook-1 = spotifyctl -q status --format '%artist%: %title%'
 
 [settings]
 screenchange-reload = true

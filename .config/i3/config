@@ -1,6 +1,10 @@
 #make windows have no bars
 for_window [class=".*"] border pixel 0
 
+# Set background picture and order screens
+#exec_always --no-startup-id $HOME/.fehbg
+#exec_always --no-startup-id ~/.screenlayout/Default.sh
+exec_always --no-startup-id $HOME/Opt/foo-Wallpaper-Feh-Gif/back4.sh auto $HOME/Desktop/Wallpaper/RoomAtNight.gif
 
 #Gaps configuration
 gaps inner 5
@@ -67,13 +71,16 @@ bindsym $mod+Shift+d exec --no-startup-id rofi -show run -ignored-prefixes 'chro
 bindsym $mod+d exec --no-startup-id rofi -show drun -ignored-prefixes 'chrome'
 
 #Shortcuts
+#Hotkeys
+#KeyBindings
+#Key Bindings
 bindsym $mod+Shift+y exec --no-startup-id ~/Opt/emojipick/emojipick
 bindsym $mod+a exec --no-startup-id /home/christian/Bin/Lock
 bindsym $mod+c exec --no-startup-id google-chrome
 bindsym $mod+Control+c exec --no-startup-id  /home/christian/Bin/chrome.sh
 bindsym $mod+y exec --no-startup-id google-chrome www.youtube.com --new-window
 bindsym $mod+t exec --no-startup-id google-chrome www.twitch.tv --new-window
-bindsym $mod+Control+r exec --no-startup-id google-chrome www.reddit.com --new-window
+bindsym $mod+r exec --no-startup-id google-chrome www.reddit.com --new-window
 
 # Sound Control
 bindsym $mod+F1 exec --no-startup-id amixer -q -D pulse sset Master toggle
@@ -179,7 +186,7 @@ workspace $ws13 output DP-2
 assign [class="TelegramDesktop"] $ws2
 assign [class="walc"] $ws2
 no_focus [class="walc"]
-#assign [class="Gnome-terminal"] $ws4
+#assign [class="gnome-terminal-server"] $ws4
 assign [class="Steam"] $ws8
 assign [class="heroic"] $ws8
 assign [class="discord"] $ws9
@@ -200,6 +207,7 @@ for_window [title="^Factorio$"] move to workspace $ws11
 for_window [title="^PORTAL 2 - OpenGL$"] move to workspace $ws11
 for_window [title="^MONSTER HUNTER: WORLD$"] move to workspace $ws11
 for_window [title="^DARK SOULS III$"] move to workspace $ws11
+for_window [title="^The Witcher 3$"] move to workspace $ws11
 for_window [class="mupen64plus"] move to workspace $ws11
 
 for_window [class="Gnome-calculator"] floating enable
@@ -292,7 +300,7 @@ mode "resize" {
         # back to normal: Enter or Escape or $mod+r
         bindsym Return mode "default"
         bindsym Escape mode "default"
-        bindsym $mod+r mode "default"
+        bindsym $mod+Control+r mode "default"
 }
 
 # window colors
@@ -303,7 +311,7 @@ client.focused_inactive $inactive-bg-color  $inactive-bg-color $inactive-text-co
 client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color          #aaaaaa
 
 # bar color
-bindsym $mod+r mode "resize"
+bindsym $mod+Control+r mode "resize"
 
 #Start i3bar to display a workspace bar (plus the system information i3status finds out, if available)
 #bar {
@@ -321,9 +329,6 @@ bindsym $mod+r mode "resize"
 #	}
 #}
 
-# Set background picture and order screens
-exec_always --no-startup-id $HOME/.fehbg
-exec_always --no-startup-id ~/.screenlayout/Default.sh
 
 #Startup
 exec_always --no-startup-id compton -b
@@ -333,9 +338,10 @@ exec_always --no-startup-id $HOME/Bin/PolybarStart
 exec_always --no-startup-id ~/.i3/i3-chrome-tab-dragging.py
 exec --no-startup-id telegram-desktop
 exec --no-startup-id walc
-exec --no-startup-id i3-sensible-terminal
 exec --no-startup-id spotify
-exec --no-startup-id i3-msg '$workspace 4; exec i3-sensible-terminal'
+exec_always --no-startup-id i3-msg workspace 4
+exec --no-startup-id i3-sensible-terminal
+exec --no-startup-id i3-msg workspace 2
 #exec --no-startup-id google-chrome --app="https://calendar.google.com"
 exec --no-startup-id $HOME/Bin/Calendar
 exec --no-startup-id $HOME/Bin/Mails
