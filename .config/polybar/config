@@ -412,6 +412,7 @@ click-left = "spotifyctl -q previous"
 [module/next]
 type = custom/ipc
 format-font = 2
+format-suffix = "   |"
 ; Default
 hook-0 = echo ""
 ; When spotify active
@@ -437,6 +438,7 @@ type = custom/ipc
 hook-0 = echo ""
 ; Playing/paused show song name and artist
 hook-1 = spotifyctl -q status --format '%artist%: %title%'
+format-suffix = "   |"
 
 [settings]
 screenchange-reload = true
