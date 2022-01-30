@@ -50,8 +50,8 @@ font-2 = FontAwesome:style=Regular:size=10
 font-3 = Font Awesome 5 Free Solid:style=Regular:size=10
 font-4 = Font Awesome 5 Brands:style=Regular:size=10
 
-modules-left = i3
-modules-right= spotify previous playpause next day date time 
+modules-left = i3 shutdown
+modules-right= spotify previous playpause next day dateClick date time 
 
 tray-position = none
 ;tray-padding = 2
@@ -104,7 +104,7 @@ font-3 = Font Awesome 5 Free Solid:style=Regular:size=10
 font-4 = Font Awesome 5 Brands:style=Regular:size=10
 
 modules-left = i3
-modules-right = network cpu pulseaudio day date time
+modules-right = network cpu pulseaudio day dateClick date time
 
 ;tray-position = right
 ;tray-padding = 2
@@ -123,6 +123,11 @@ modules-right = network cpu pulseaudio day date time
 
 cursor-click = pointer
 cursor-scroll = ns-resize
+
+[module/dateClick]
+type = custom/script
+exec = echo ""
+click-left = exec i3-msg workspace 13
 
 [module/xwindow]
 type = internal/xwindow
@@ -278,34 +283,33 @@ type = internal/date
 interval = 1
 time =  %H:%M:%S
 label = %time%
-#format-prefix = "|   "
-#format-suffix = "   |"
 
 [module/date]
 type = internal/date
 interval = 1
-date = " %d.%m.%Y"
-#time =  %H:%M:%S
+date = "%d.%m.%Y"
 label = %date%
-#format-prefix = "|   "
 format-suffix = "   |"
-#format-suffix = " | "
-#format-prefix-foreground = ${colors.foreground-alt}
-#format-underline = #0a6cf5
+
+[module/test]
+type = custom/script
+exec = echo "Test"
+label = %date%
+click-left = exec i3-msg workspace 13
 
 [module/day]
 type = internal/date
+exec = echo "Test"
 interval = 1
 date = "%A"
 label = %date%
-#format-prefix = "|   "
 format-suffix = "   |"
+click-left = exec i3-msg workspace 13
 
 [module/pulseaudio]
 type = internal/pulseaudio
 
 format-volume = <label-volume> <bar-volume>
-#format-volume-prefix = "|   "
 format-volume-suffix = "   |"
 label-volume = VOL %percentage%%
 label-volume-foreground = ${root.foreground}
@@ -317,7 +321,8 @@ scroll-down = pulseaudio-control --volume-max 10 down
 #open audio manager on click
 click-right = exec pavucontrol &
 
-#format-muted = <label-volume> <bar-volume>
+format-muted-suffix = "   |"
+format-muted = <label-muted> <bar-volume>
 label-muted = VOL %percentage%%
 label-muted-foreground = #666
 
@@ -439,6 +444,12 @@ hook-0 = echo ""
 ; Playing/paused show song name and artist
 hook-1 = spotifyctl -q status --format '%artist%: %title%'
 format-suffix = "   |"
+
+[module/shutdown]
+type = custom/ipc
+label = "Shutdown"
+format-suffix = "   |"
+click-left = "exec notify-send "Test""
 
 [settings]
 screenchange-reload = true
