@@ -150,3 +150,4 @@ alias editpolybar='vim $HOME/.config/polybar/config'
 function addAlias(){echo "alias $1='$2'" >> ~/.zshrc; }
 function search(){la | grep -i $1}
 function showInstalled(){dpkg --list "*$1*"}
+alias startAnimation='nohup ~/Opt/foo-Wallpaper-Feh-Gif/back4.sh auto ~/Desktop/Wallpaper/RoomAtNight.gif &'

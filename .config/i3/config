@@ -4,7 +4,7 @@ for_window [class=".*"] border pixel 0
 # Set background picture and order screens
 #exec_always --no-startup-id $HOME/.fehbg
 #exec_always --no-startup-id ~/.screenlayout/Default.sh
-exec_always --no-startup-id $HOME/Opt/foo-Wallpaper-Feh-Gif/back4.sh auto $HOME/Desktop/Wallpaper/RoomAtNight.gif
+exec --no-startup-id $HOME/Opt/foo-Wallpaper-Feh-Gif/back4.sh auto $HOME/Desktop/Wallpaper/RoomAtNight.gif
 
 #Gaps configuration
 gaps inner 5
