@@ -169,6 +169,7 @@ type = internal/cpu
 interval = 0.5
 format-suffix = "   |"
 label = %percentage:2%%
+format =   <label>
 
 [module/time]
 type = internal/date
@@ -204,7 +205,7 @@ type = internal/pulseaudio
 
 format-volume = <label-volume> <bar-volume>
 format-volume-suffix = "   |"
-label-volume = VOL %percentage%%
+label-volume =  %percentage%%
 label-volume-foreground = ${root.foreground}
 
 #change volume on scroll
@@ -216,7 +217,7 @@ click-right = exec pavucontrol &
 
 format-muted-suffix = "   |"
 format-muted = <label-muted> <bar-volume>
-label-muted = VOL %percentage%%
+label-muted =  %percentage%%
 label-muted-foreground = #666
 
 bar-volume-width = 10
@@ -243,10 +244,11 @@ interval = 1.0
 
 label-connected = "%downspeed%   %upspeed%"
 label-connected-alignment = right
-label-connected-minlen = 20
-label-connected-maxlen = 20
-label-disconnected = disconnected
+label-connected-minlen = 17
+label-connected-maxlen = 17
+format-connected = <label-connected>
 format-connected-suffix = "  |"
+label-disconnected = disconnected
 
 [module/previous]
 type = custom/ipc
