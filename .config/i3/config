@@ -72,10 +72,12 @@ bindsym $mod+d exec --no-startup-id rofi -show drun -ignored-prefixes 'chrome'
 
 #Shortcuts
 #Hotkeys
+#hotkeys
 #KeyBindings
 #Key Bindings
 bindsym $mod+Shift+y exec --no-startup-id ~/Opt/emojipick/emojipick
 bindsym $mod+a exec --no-startup-id /home/christian/Bin/Lock
+bindsym $mod+u exec --no-startup-id /home/christian/Bin/removeUrgency
 bindsym $mod+c exec --no-startup-id google-chrome
 bindsym $mod+Control+c exec --no-startup-id  /home/christian/Bin/chrome.sh
 bindsym $mod+y exec --no-startup-id google-chrome www.youtube.com --new-window
