@@ -168,8 +168,8 @@ label-visible-padding = 1
 type = internal/cpu
 interval = 0.5
 format-suffix = "   |"
-label = %percentage:2%%
-format =   <label>
+label = %percentage:2%
+format = %{A1:/usr/bin/htop:}  <label> %{A}
 
 [module/time]
 type = internal/date
@@ -240,13 +240,10 @@ bar-volume-empty-foreground = ${colors.foreground-alt}
 [module/network]
 type = internal/network
 interface = enp0s25 
-interval = 1.0
-
-label-connected = "%downspeed%   %upspeed%"
+interval = 0.5
+label-connected = "%downspeed%"
 label-connected-alignment = right
-label-connected-minlen = 17
-label-connected-maxlen = 17
-format-connected = <label-connected>
+format-connected =   <label-connected>
 format-connected-suffix = "  |"
 label-disconnected = disconnected
 
