@@ -8,6 +8,8 @@ endif
 
 call plug#begin('~/.config/nvim/autoload/plugged')
 
+    " i3config syntax
+    Plug 'mboughaba/i3config.vim'
     " Better Syntax Support
     Plug 'sheerun/vim-polyglot'
     " File Explorer

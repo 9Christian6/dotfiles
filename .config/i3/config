@@ -354,3 +354,4 @@ exec_always $HOME/Bin/removeUrgency
 
 # prevent screen from going into energy save mode
 exec --no-startup-id xset -dpms s off
+# vim: filetype=i3config
