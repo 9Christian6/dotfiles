@@ -115,6 +115,11 @@ export EDITOR='nvim'
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+#functions
+function addAlias(){echo "alias $1='$2'" >> ~/.zshrc; }
+function search(){la | grep -i $1}
+function showInstalled(){dpkg --list "*$1*"}
+
 #aliases
 alias Backup='sudo rsnapshot -v alpha'
 alias la="ls -a"
@@ -129,12 +134,17 @@ alias ccc='/home/christian/Desktop/Bachelor-Arbeit/build/ccc'
 alias listDisks='sudo fdisk -l | grep -i /dev/sd'
 alias lgrep='la | grep'
 alias vim='nvim'
-alias zshrc='nvim $HOME/.zshrc && source $HOME/.zshrc'
 alias :q='exit'
+alias :Q='exit'
 alias :wq='exit'
 alias editi3='vim $HOME/.config/i3/config'
-alias editPolybar='vim $HOME/.config/polybar/config'
+alias zshrc='nvim $HOME/.zshrc && source $HOME/.zshrc'
 alias editzsh='vim $HOME/.zshrc && source $HOME/.zshrc'
+alias editZsh='vim $HOME/.zshrc && source $HOME/.zshrc'
+alias editzshrc='nvim $HOME/.zshrc && source $HOME/.zshrc'
+alias editZshrc='nvim $HOME/.zshrc && source $HOME/.zshrc'
+alias editPolybar='vim $HOME/.config/polybar/config'
+alias editpolybar='vim $HOME/.config/polybar/config'
 alias clearmake='clear && cmake --build .'
 alias cleanmake='cmake --build . --target clean'
 alias aptUpdate='sudo apt-get update && sudo apt-get upgrade'
@@ -145,10 +155,7 @@ alias DS='flatpak run org.desmume.DeSmuME'
 alias makerun='cmake --build . && ccc'
 alias scriptBackup='/usr/bin/git --git-dir=/home/christian/scripts/ --work-tree=/home/christian'
 alias vifm='$HOME/.config/vifm/scripts/vifmrun'
-alias editpolybar='vim $HOME/.config/polybar/config'
-#functions
-function addAlias(){echo "alias $1='$2'" >> ~/.zshrc; }
-function search(){la | grep -i $1}
-function showInstalled(){dpkg --list "*$1*"}
 alias startAnimation='nohup ~/Opt/foo-Wallpaper-Feh-Gif/back4.sh auto ~/Desktop/Wallpaper/RoomAtNight.gif &'
 alias M64='nohup mupen64plus ~/Opt/N64Games/Mario64.n64 &'
+alias Update='sudo apt update && sudo apt upgrade'
+alias update='sudo apt update && sudo apt upgrade'
