@@ -49,6 +49,7 @@ font-3 = Font Awesome 5 Free Solid:style=Regular:size=10
 font-4 = Font Awesome 5 Brands:style=Regular:size=10
 
 modules-left = i3 
+modules-center = programs
 modules-right= spotify previous playpause next day date time shutdown
 
 tray-position = none
@@ -95,6 +96,11 @@ cursor-scroll = ns-resize
 type = custom/script
 exec = echo "|   "
 click-left = exec ~/Bin/Shutdown
+
+[module/programs]
+type = custom/script
+exec = echo ""
+click-left = exec ~/Bin/dmenu
 
 [module/dateClick]
 type = custom/script
@@ -191,6 +197,7 @@ exec = echo "Test"
 label = %date%
 click-left = exec i3-msg workspace 13
 
+
 [module/day]
 type = internal/date
 exec = echo "Test"
@@ -284,6 +291,7 @@ hook-0 = echo ""
 ; Playing/paused show song name and artist
 hook-1 = spotifyctl -q status --format '%artist%: %title%'
 format-suffix = "   |"
+
 
 [settings]
 screenchange-reload = true

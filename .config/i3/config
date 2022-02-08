@@ -78,11 +78,12 @@ bindsym $mod+d exec --no-startup-id rofi -show drun -ignored-prefixes 'chrome'
 bindsym $mod+Shift+y exec --no-startup-id ~/Opt/emojipick/emojipick
 bindsym $mod+a exec --no-startup-id /home/christian/Bin/Lock
 bindsym $mod+u exec --no-startup-id /home/christian/Bin/removeUrgency
-bindsym $mod+c exec --no-startup-id google-chrome
+bindsym $mod+c exec --no-startup-id chromium
 bindsym $mod+Control+c exec --no-startup-id  /home/christian/Bin/chrome.sh
 bindsym $mod+y exec --no-startup-id google-chrome www.youtube.com --new-window
 bindsym $mod+t exec --no-startup-id google-chrome www.twitch.tv --new-window
 bindsym $mod+r exec --no-startup-id google-chrome www.reddit.com --new-window
+bindsym $mod+Control+s exec /home/christian/Bin/Shutdown
 
 # Sound Control
 bindsym $mod+F1 exec --no-startup-id amixer -q -D pulse sset Master toggle
