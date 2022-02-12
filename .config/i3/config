@@ -81,7 +81,7 @@ bindsym $mod+u exec --no-startup-id /home/christian/Bin/removeUrgency
 bindsym $mod+c exec --no-startup-id chromium
 bindsym $mod+Control+c exec --no-startup-id  /home/christian/Bin/chrome.sh
 bindsym $mod+y exec --no-startup-id chromium www.youtube.com --new-window
-bindsym $mod+t exec --no-startup-id chromium www.twitch.tv --new-window
+bindsym $mod+t exec --no-startup-id chromium www.twitch.tv/following/live --new-window
 bindsym $mod+r exec --no-startup-id chromium www.reddit.com --new-window
 bindsym $mod+Control+s exec /home/christian/Bin/Shutdown
 bindsym $mod+Control+h workspace prev_on_output
@@ -214,6 +214,7 @@ for_window [title="^MONSTER HUNTER: WORLD$"] move to workspace $ws11
 for_window [title="^DARK SOULS III$"] move to workspace $ws11
 for_window [title="^The Witcher 3$"] move to workspace $ws11
 for_window [class="mupen64plus"] move to workspace $ws11
+for_window [class="^Hollow$"] move to workspace $ws11
 
 for_window [class="Gnome-calculator"] floating enable
 for_window [class="Shutter"] floating enable
@@ -222,6 +223,7 @@ for_window [class="Lutris"] floating enable
 for_window [class="battle.net.exe"] floating enable
 for_window [class="Pavucontrol"] floating enable
 for_window [class="Desmume"] floating enable
+for_window [class="SFML works!"] floating enable
 
 #go to Coding workspace
 bindsym $mod+Control+space workspace $ws4; workspace $ws1; exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ 1 && $refresh_i3status
@@ -350,10 +352,11 @@ exec --no-startup-id i3-msg workspace 2
 #exec --no-startup-id google-chrome --app="https://calendar.google.com"
 exec --no-startup-id $HOME/Bin/Calendar
 exec --no-startup-id $HOME/Bin/Mails
+exec "xrandr --output HDMI-0 --auto --right-of DVI-D-0"
 
 
 #remove urgency color
-exec_always $HOME/Bin/removeUrgency
+exec_always --no-startup-id "sh -c 'sleep 10; exec removeUrgency'"
 
 # prevent screen from going into energy save mode
 exec --no-startup-id xset -dpms s off

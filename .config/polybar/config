@@ -47,9 +47,10 @@ font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
 font-2 = FontAwesome:style=Regular:size=10
 font-3 = Font Awesome 5 Free Solid:style=Regular:size=10
 font-4 = Font Awesome 5 Brands:style=Regular:size=10
+font-5 = Font Awesome 5 Free,Font Awesome 5 Free Solid:style=Solid
 
 modules-left = i3 
-modules-center = programs
+#modules-center = programs
 modules-right= spotify previous playpause next day date time shutdown
 
 tray-position = none
@@ -92,6 +93,43 @@ modules-right = network cpu pulseaudio day date time shutdown
 cursor-click = pointer
 cursor-scroll = ns-resize
 
+[bar/rightTV]
+enable-ipc = true
+monitor = HDMI-0
+width = 100%
+height = 27
+radius = 6.0
+fixed-center = false
+bottom = true
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+line-size = 3
+line-color = #f-01
+
+border-size = 0
+border-color = #00000000
+
+padding-left = 0
+padding-right = 0
+
+module-margin-left = 1
+module-margin-right = 2
+
+font-0 = fixed:pixelsize=10;1
+font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
+font-2 = FontAwesome:style=Regular:size=10
+font-3 = Font Awesome 5 Free Solid:style=Regular:size=10
+font-4 = Font Awesome 5 Brands:style=Regular:size=10
+
+modules-left = i3
+modules-right = network cpu pulseaudio day date time shutdown
+
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+
 [module/shutdown]
 type = custom/script
 exec = echo "|   "
@@ -99,7 +137,7 @@ click-left = exec ~/Bin/Shutdown
 
 [module/programs]
 type = custom/script
-exec = echo ""
+exec = echo ""
 click-left = exec ~/Bin/dmenu
 
 [module/dateClick]
