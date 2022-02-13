@@ -196,6 +196,8 @@ fileviewer <image/*>
     \ vifmimg draw %px %py %pw %ph %c
     \ %pc
     \ vifmimg clear
+filetype *.jpg gimp &
+filetype *.png gimp &
 
 fileviewer <audio/*>
     \ vifmimg audio %px %py %pw %ph %c
