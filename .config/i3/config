@@ -85,7 +85,9 @@ bindsym $mod+t exec --no-startup-id chromium www.twitch.tv/following/live --new-
 bindsym $mod+r exec --no-startup-id chromium www.reddit.com --new-window
 bindsym $mod+Control+s exec /home/christian/Bin/Shutdown
 bindsym $mod+Control+h workspace prev_on_output
+bindsym $mod+Control+Left workspace prev_on_output
 bindsym $mod+Control+l workspace next_on_output
+bindsym $mod+Control+Right workspace next_on_output
 
 # Sound Control
 bindsym $mod+F1 exec --no-startup-id amixer -q -D pulse sset Master toggle
@@ -184,6 +186,7 @@ workspace $ws10 output DVI-D-0
 workspace $ws11 output DP-2
 workspace $ws12 output DP-2
 workspace $ws13 output DP-2
+workspace $ws14 output HDMI-0
 
 
 #Workspace assignments
@@ -224,6 +227,7 @@ for_window [class="battle.net.exe"] floating enable
 for_window [class="Pavucontrol"] floating enable
 for_window [class="Desmume"] floating enable
 for_window [class="SFML works!"] floating enable
+for_window [class="Gimp"] floating enable
 
 #go to Coding workspace
 bindsym $mod+Control+space workspace $ws4; workspace $ws1; exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ 1 && $refresh_i3status
