@@ -88,7 +88,7 @@ font-3 = Font Awesome 5 Free Solid:style=Regular:size=10
 font-4 = Font Awesome 5 Brands:style=Regular:size=10
 
 modules-left = i3
-modules-right = network cpu pulseaudio day date time shutdown
+modules-right =  network cpu pulseaudio cava day date time shutdown
 
 cursor-click = pointer
 cursor-scroll = ns-resize
@@ -129,6 +129,14 @@ modules-right = network cpu pulseaudio day date time shutdown
 cursor-click = pointer
 cursor-scroll = ns-resize
 
+[module/cava]
+type = custom/script
+tail = true
+exec = $HOME/Bin/cava.sh
+format = <label>
+format-font = 5
+label = %output%
+format-suffix = "   |"
 
 [module/shutdown]
 type = custom/script
