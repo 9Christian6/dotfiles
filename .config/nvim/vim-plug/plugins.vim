@@ -22,4 +22,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'lambdalisue/suda.vim'
     " Color Highlighting
     Plug 'chrisbra/Colorizer'
+    "LaTeX Support
+    Plug 'vim-latex/vim-latex'
+    "Autocompletion
+    Plug 'vim-scripts/AutoComplPop'
 call plug#end()

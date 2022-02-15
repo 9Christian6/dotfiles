@@ -147,6 +147,7 @@ alias editPolybar='nvim $HOME/.config/polybar/config'
 alias editpolybar='nvim $HOME/.config/polybar/config'
 alias clearmake='clear && cmake --build .'
 alias cleanmake='cmake --build . --target clean'
+alias cleanmakerun='cleanmake && makerun'
 alias aptUpdate='sudo apt-get update && sudo apt-get upgrade'
 alias clearmakerun='clear && cmake --build . && ccc'
 alias open=xdg-open
