@@ -192,7 +192,7 @@ workspace $ws14 output HDMI-0
 #Workspace assignments
 
 assign [class="TelegramDesktop"] $ws2
-assign [class="walc"] $ws2
+assign [class="whatsdesk"] $ws2
 no_focus [class="walc"]
 #assign [class="gnome-terminal-server"] $ws4
 assign [class="Steam"] $ws8
@@ -342,13 +342,15 @@ bindsym $mod+Control+r mode "resize"
 
 
 #Startup
+#Autostart
+#autostart
 exec_always --no-startup-id compton -b
 exec_always --no-startup-id $HOME/Bin/StartDiscord
 exec_always --no-startup-id $HOME/Bin/PolybarStart
 
 exec_always --no-startup-id ~/.i3/i3-chrome-tab-dragging.py
 exec --no-startup-id telegram-desktop
-exec --no-startup-id walc
+exec --no-startup-id whatsdesk
 exec --no-startup-id spotify
 exec_always --no-startup-id i3-msg workspace 4
 exec --no-startup-id i3-sensible-terminal
