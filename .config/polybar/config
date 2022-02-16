@@ -40,14 +40,11 @@ padding-left = 0
 padding-right = 0
 
 module-margin-left = 1
-module-margin-right = 2
+module-margin-right = 1
 
-font-0 = fixed:pixelsize=10;1
+font-0 = DejaVu Sans Mono:size=10
 font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
 font-2 = FontAwesome:style=Regular:size=10
-font-3 = Font Awesome 5 Free Solid:style=Regular:size=10
-font-4 = Font Awesome 5 Brands:style=Regular:size=10
-font-5 = Font Awesome 5 Free,Font Awesome 5 Free Solid:style=Solid
 
 modules-left = i3 
 #modules-center = programs
@@ -79,16 +76,14 @@ padding-left = 0
 padding-right = 0
 
 module-margin-left = 1
-module-margin-right = 2
+module-margin-right = 1
 
-font-0 = fixed:pixelsize=10;1
+font-0 = DejaVu Sans Mono:size=10
 font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
 font-2 = FontAwesome:style=Regular:size=10
-font-3 = Font Awesome 5 Free Solid:style=Regular:size=10
-font-4 = Font Awesome 5 Brands:style=Regular:size=10
 
 modules-left = i3
-modules-right =  network cpu pulseaudio cava day date time shutdown
+modules-right =  network cpu pulseaudio day date time shutdown
 
 cursor-click = pointer
 cursor-scroll = ns-resize
@@ -117,11 +112,12 @@ padding-right = 0
 module-margin-left = 1
 module-margin-right = 2
 
-font-0 = fixed:pixelsize=10;1
-font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
-font-2 = FontAwesome:style=Regular:size=10
-font-3 = Font Awesome 5 Free Solid:style=Regular:size=10
-font-4 = Font Awesome 5 Brands:style=Regular:size=10
+font-0 = DejaVu Sans Mono
+font-1 = fixed:pixelsize=10;1
+font-2 = unifont:fontformat=truetype:size=8:antialias=false;0
+font-3 = FontAwesome:style=Regular:size=10
+font-4 = Font Awesome 5 Free Solid:style=Regular:size=10
+font-5 = Font Awesome 5 Brands:style=Regular:size=10
 
 modules-left = i3
 modules-right = network cpu pulseaudio day date time shutdown
@@ -129,29 +125,16 @@ modules-right = network cpu pulseaudio day date time shutdown
 cursor-click = pointer
 cursor-scroll = ns-resize
 
-[module/cava]
-type = custom/script
-tail = true
-exec = $HOME/Bin/cava.sh
-format = <label>
-format-font = 5
-label = %output%
-format-suffix = "   |"
-
 [module/shutdown]
 type = custom/script
-exec = echo "|   "
+;exec = echo "| "
+exec = echo ""
 click-left = exec ~/Bin/Shutdown
 
 [module/programs]
 type = custom/script
 exec = echo ""
 click-left = exec ~/Bin/dmenu
-
-[module/dateClick]
-type = custom/script
-exec = echo ""
-click-left = exec i3-msg workspace 13
 
 [module/i3]
 type = internal/i3
@@ -165,16 +148,12 @@ strip-wsnumbers = false
 ; Sort the workspaces by index instead of the default
 ; sorting that groups the workspaces by output
 ; Default: false
+
 index-sort = true
-
 enable-click = true
-
 enable-scroll = false
-
 wrapping-scroll = false
-
 reverse-scroll = false
-
 fuzzy-match = false
 
 ws-icon-default = 
@@ -193,7 +172,7 @@ ws-icon-11 = 12;
 ws-icon-12 = 13;
 
 label-separator = |
-label-separator-padding = 1 
+label-separator-padding = 0
 label-separator-foreground = #ffffff
 
 ; focused = Active workspace on focused monitor
@@ -219,15 +198,16 @@ label-visible-padding = 1
 [module/cpu]
 type = internal/cpu
 interval = 0.5
-format-suffix = "   |"
+format-suffix = " |"
 label = %percentage:2%
-format = %{A1:/usr/bin/htop:}  <label> %{A}
+format =  <label>
 
 [module/time]
 type = internal/date
 interval = 1
 time =  %H:%M:%S
 label = %time%
+format-suffix = " |"
 
 [module/date]
 type = internal/date
@@ -235,31 +215,25 @@ interval = 1
 date = "%d.%m.%Y"
 label = %date%
 format = %{A1:~/Bin/goToCalendar:}  <label> %{A}
-format-suffix = "   |"
-
-[module/test]
-type = custom/script
-exec = echo "Test"
-label = %date%
-click-left = exec i3-msg workspace 13
-
+format-suffix = " |"
 
 [module/day]
 type = internal/date
-exec = echo "Test"
 interval = 1
 date = "%A"
 label = %date%
-format-suffix = "   |"
+format-suffix = "  |"
 click-left = exec i3-msg workspace 13
 
 [module/pulseaudio]
 type = internal/pulseaudio
 
-format-volume = <label-volume> <bar-volume>
-format-volume-suffix = "   |"
-label-volume =  %percentage%%
+format-volume = <label-volume><bar-volume>
+format-volume-suffix = " |"
+label-volume =   %percentage%%
 label-volume-foreground = ${root.foreground}
+label-volume-maxlen = 8
+label-volume-minlen = 8
 
 #change volume on scroll
 scroll-up = pulseaudio-control --volume-max 10 up
@@ -268,10 +242,12 @@ scroll-down = pulseaudio-control --volume-max 10 down
 #open audio manager on click
 click-right = exec pavucontrol &
 
-format-muted-suffix = "   |"
-format-muted = <label-muted> <bar-volume>
-label-muted =  %percentage%%
+format-muted-suffix = " |"
+format-muted = <label-muted><bar-volume>
+label-muted =   %percentage%%
 label-muted-foreground = #666
+label-muted-maxlen = 8
+label-muted-minlen = 8
 
 bar-volume-width = 10
 bar-volume-foreground-0 = #55aa55
@@ -294,11 +270,13 @@ bar-volume-empty-foreground = ${colors.foreground-alt}
 type = internal/network
 interface = enp0s25 
 interval = 0.5
+format-connected =  <label-connected>
+format-connected-suffix = " |"
 label-connected = "%downspeed%"
 label-connected-alignment = right
-format-connected =   <label-connected>
-format-connected-suffix = "  |"
-label-disconnected = disconnected
+label-connected-maxlen = 8
+label-connected-minlen = 8
+label-disconnected = ""
 
 [module/previous]
 type = custom/ipc
@@ -312,7 +290,7 @@ click-left = "spotifyctl -q previous"
 [module/next]
 type = custom/ipc
 format-font = 2
-format-suffix = "   |"
+format-suffix = "|"
 ; Default
 hook-0 = echo ""
 ; When spotify active
@@ -336,19 +314,6 @@ type = custom/ipc
 hook-0 = echo ""
 ; Playing/paused show song name and artist
 hook-1 = spotifyctl -q status --format '%artist%: %title%'
-format-suffix = "   |"
-
-
-[settings]
-screenchange-reload = true
-;compositing-background = xor
-;compositing-background = screen
-;compositing-foreground = source
-;compositing-border = over
-;pseudo-transparency = false
-
-[global/wm]
-margin-top = 5
-margin-bottom = 5
+format-suffix = "|"
 
 ; vim:ft=dosini:
