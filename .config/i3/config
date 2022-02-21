@@ -186,7 +186,8 @@ workspace $ws10 output DVI-D-0
 workspace $ws11 output DP-2
 workspace $ws12 output DP-2
 workspace $ws13 output DP-2
-workspace $ws14 output HDMI-0
+workspace $ws14 output DP-2
+workspace $ws19 output HDMI-0
 
 
 #Workspace assignments
@@ -204,6 +205,7 @@ assign [class="leagueclient.exe"] $ws11
 assign [class="leagueclientux.exe"] $ws11
 assign [class="league of legends.exe"] $ws11
 assign [class="leagueclient.exe"] $ws11
+assign [class="Todoist"] $ws14
 assign [class="Code"] $ws1
 assign [class="Google-chrome" instance="calendar.google.com"] $ws13
 assign [class="Google-chrome" instance="webmail.uni-saarland.de__imp_dynamic.php"] $ws12
@@ -352,6 +354,7 @@ exec_always --no-startup-id ~/.i3/i3-chrome-tab-dragging.py
 exec --no-startup-id telegram-desktop
 exec --no-startup-id whatsdesk
 exec --no-startup-id spotify
+exec --no-stratup-id Todoist
 exec_always --no-startup-id i3-msg workspace 4
 exec --no-startup-id i3-sensible-terminal
 exec --no-startup-id i3-msg workspace 2
