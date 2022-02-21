@@ -170,6 +170,7 @@ ws-icon-9 = 10;
 ws-icon-10 = 11;
 ws-icon-11 = 12;
 ws-icon-12 = 13;
+ws-icon-13 = 14;
 
 label-separator = |
 label-separator-padding = 0
@@ -200,7 +201,8 @@ type = internal/cpu
 interval = 0.5
 format-suffix = " |"
 label = %percentage:2%
-format =  <label>
+format = %{A1:~/Bin/notify:}  <label> %{A}
+;format =  <label>
 
 [module/time]
 type = internal/date
@@ -222,8 +224,8 @@ type = internal/date
 interval = 1
 date = "%A"
 label = %date%
-format-suffix = "  |"
-click-left = exec i3-msg workspace 13
+format = %{A1:~/Bin/goToCalendar:}<label> %{A}
+format-suffix = " |"
 
 [module/pulseaudio]
 type = internal/pulseaudio
@@ -289,8 +291,7 @@ click-left = "spotifyctl -q previous"
 
 [module/next]
 type = custom/ipc
-format-font = 2
-format-suffix = "|"
+format-suffix = " |"
 ; Default
 hook-0 = echo ""
 ; When spotify active
@@ -299,7 +300,7 @@ click-left = "spotifyctl -q next"
 
 [module/playpause]
 type = custom/ipc
-format-font = 2
+format-font = 5
 ; Default
 hook-0 = echo ""
 ; Playing
@@ -314,6 +315,8 @@ type = custom/ipc
 hook-0 = echo ""
 ; Playing/paused show song name and artist
 hook-1 = spotifyctl -q status --format '%artist%: %title%'
-format-suffix = "|"
+initial = 1
+click-left = polybar-msg hook spotify 1
+format-suffix = " |"
 
 ; vim:ft=dosini:
