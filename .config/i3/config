@@ -71,10 +71,12 @@ bindsym $mod+Shift+d exec --no-startup-id rofi -show run -ignored-prefixes 'chro
 bindsym $mod+d exec --no-startup-id rofi -show drun -ignored-prefixes 'chrome'
 
 #Shortcuts
+#shortcuts
 #Hotkeys
 #hotkeys
 #KeyBindings
 #Key Bindings
+bindsym $mod+q exec "eval $(xdotool getmouselocation --shell) && shutter -s=$X,$Y,300,300"
 bindsym $mod+Shift+y exec --no-startup-id ~/Opt/emojipick/emojipick
 bindsym $mod+a exec --no-startup-id /home/christian/Bin/Lock
 bindsym $mod+u exec --no-startup-id /home/christian/Bin/removeUrgency
