@@ -214,6 +214,7 @@ assign [class="Google-chrome" instance="webmail.uni-saarland.de__imp_dynamic.php
 assign [class="Google-chrome" instance="mail.google.com__mail_u_0"] $ws12
 for_window [class="Spotify"] move to workspace $ws5
 for_window [title="^Sekiro$"] move to workspace $ws11
+for_window [title="^ELDEN$"] move to workspace $ws11
 for_window [title="^Celeste$"] move to workspace $ws11
 for_window [title="^Factorio$"] move to workspace $ws11
 for_window [title="^PORTAL 2 - OpenGL$"] move to workspace $ws11
