@@ -130,7 +130,7 @@ type = internal/memory
 interval = 3
 format = <label>
 format-suffix = " |"
-label = " %gb_used% "
+label = " %gb_used% / 7.71GiB "
 
 [module/shutdown]
 type = custom/script
