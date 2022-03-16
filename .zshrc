@@ -85,6 +85,7 @@ plugins=(git vi-mode zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
+
 # User configuration
 
 #Add Bin and Opt to path
@@ -162,3 +163,8 @@ alias Update='sudo apt update && sudo apt upgrade'
 alias update='sudo apt update && sudo apt upgrade'
 alias enableXBox='sudo systemctl start xow.service'
 alias disableXBox='sudo systemctl stop xow.service'
+
+typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
+#Print ascii art
+#/home/christian/Bin/fm6000 -dog -c magenta
+/usr/local/bin/pokemon-colorscripts -r
