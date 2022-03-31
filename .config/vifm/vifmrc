@@ -175,7 +175,7 @@ fileviewer *.pdf
     \ vifmimg pdf %px %py %pw %ph %c
     \ %pc
     \ vifmimg clear
-filetype *.pdf evince &
+filetype *.pdf okular &
 
 fileviewer *.djvu
     \ vifmimg djvu %px %py %pw %ph %c
