@@ -1,3 +1,5 @@
+source /home/christian/.zprofile
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -125,7 +127,7 @@ function showInstalled(){dpkg --list "*$1*"}
 alias Backup='sudo rsnapshot -v alpha'
 alias la="ls -a"
 alias cl="clear"
-alias cls="clear && cd ~"
+alias cls="cd ~ && clear"
 alias cla="clear && la"
 alias config='/usr/bin/git --git-dir=/home/christian/dotfiles/ --work-tree=/home/christian'
 alias dotfileBackup='/usr/bin/git --git-dir=/home/christian/dotfiles/ --work-tree=/home/christian'
@@ -163,6 +165,7 @@ alias Update='sudo apt update && sudo apt upgrade'
 alias update='sudo apt update && sudo apt upgrade'
 alias enableXBox='sudo systemctl start xow.service'
 alias disableXBox='sudo systemctl stop xow.service'
+alias network='sudo nethogs'
 
 typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
 #Print ascii art
