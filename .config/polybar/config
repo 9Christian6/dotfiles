@@ -334,4 +334,12 @@ initial = 1
 click-left = polybar-msg hook spotify 1
 format-suffix = " |"
 
+[module/agenda]
+type = custom/script
+exec = i3-agenda -c ~/Opt/i3-agenda/client_secret_813316797865-o8vf7f9fd7pkbepp1f10aaegtm9gmhr2.apps.googleusercontent.com.json -ttl 1
+click-left = exec ~/Bin/goToCalendar
+click-right = notify-send "syncing..." && i3-agenda -c ~/Opt/i3-agenda/client_secret_813316797865-o8vf7f9fd7pkbepp1f10aaegtm9gmhr2.apps.googleusercontent.com.json  --update && notify-send -t 2000 "sync finished"
+interval = 1
+format-suffix = " |"
+
 ; vim:ft=dosini:
