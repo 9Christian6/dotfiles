@@ -175,7 +175,7 @@ fileviewer *.pdf
     \ vifmimg pdf %px %py %pw %ph %c
     \ %pc
     \ vifmimg clear
-filetype *.pdf okular &
+filetype *.pdf evince &
 
 fileviewer *.djvu
     \ vifmimg djvu %px %py %pw %ph %c
@@ -196,8 +196,8 @@ fileviewer <image/*>
     \ vifmimg draw %px %py %pw %ph %c
     \ %pc
     \ vifmimg clear
-filetype *.jpg gimp &
-filetype *.png gimp &
+filetype *.jpg feh &
+filetype *.png feh &
 
 fileviewer <audio/*>
     \ vifmimg audio %px %py %pw %ph %c
