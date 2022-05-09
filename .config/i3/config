@@ -189,7 +189,7 @@ workspace $ws10 output DVI-D-0
 workspace $ws11 output DP-2
 workspace $ws12 output DP-2
 workspace $ws13 output DP-2
-workspace $ws14 output DP-2
+workspace $ws14 output DVI-D-0
 workspace $ws19 output HDMI-0
 
 
@@ -210,9 +210,11 @@ assign [class="league of legends.exe"] $ws11
 assign [class="leagueclient.exe"] $ws11
 assign [class="Todoist"] $ws14
 assign [class="Code"] $ws1
-assign [class="Google-chrome" instance="calendar.google.com"] $ws13
+assign [class="Chromium" instance="calendar.google.com"] $ws13
 assign [class="Chromium" instance="webmail.uni-saarland.de__imp_dynamic.php"] $ws12
 assign [class="Chromium" instance="mail.google.com__mail_u_0"] $ws12
+assign [class="go-for-it"] $ws14
+assign [class="Go-for-it"] $ws14
 for_window [class="Spotify"] move to workspace $ws5
 for_window [title="^Sekiro$"] move to workspace $ws11
 for_window [title="^ELDEN$"] move to workspace $ws11
@@ -359,12 +361,11 @@ exec --no-startup-id telegram-desktop
 exec --no-startup-id whatsdesk
 exec --no-startup-id spotify
 exec --no-stratup-id todoist
-exec_always --no-startup-id /home/christian/Bin/TerminalStartup
-#exec_always --no-startup-id i3-msg workspace 4
-#exec --no-startup-id i3-sensible-terminal
+exec --no-startup-id $HOME/Bin/TerminalStartup
 exec --no-startup-id i3-msg workspace 2
 exec --no-startup-id $HOME/Bin/Calendar
 exec --no-startup-id $HOME/Bin/Mails
+exec --no-startup-id go-for-it
 exec "xrandr --output HDMI-0 --auto --right-of DVI-D-0"
 exec "i3-msg '[instance=gnome-terminal-server] move to workspace 4'"
 
