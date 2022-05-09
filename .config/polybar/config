@@ -216,8 +216,7 @@ type = internal/cpu
 interval = 0.5
 format-suffix = " |"
 label = %percentage:2%
-format = %{A1:~/Bin/notify:}  <label> %{A}
-;format =  <label>
+format = %{A1:~/Bin/htop:}  <label> %{A}
 
 [module/time]
 type = internal/date
@@ -331,7 +330,7 @@ hook-0 = echo ""
 ; Playing/paused show song name and artist
 hook-1 = spotifyctl -q status --format '%artist%: %title%'
 initial = 1
-click-left = polybar-msg hook spotify 1
+click-left = polybar-msg hook spotify 0
 format-suffix = " |"
 
 [module/agenda]
