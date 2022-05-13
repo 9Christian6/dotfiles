@@ -85,7 +85,7 @@ bindsym $mod+c exec --no-startup-id chromium
 bindsym $mod+Control+c exec --no-startup-id  /home/christian/Bin/chrome.sh
 bindsym $mod+y exec --no-startup-id chromium www.youtube.com --new-window
 bindsym $mod+t exec --no-startup-id chromium www.twitch.tv/following/live --new-window
-bindsym $mod+r exec --no-startup-id chromium old.reddit.com --new-window
+bindsym $mod+Control+r exec --no-startup-id chromium old.reddit.com --new-window
 bindsym $mod+Control+s exec /home/christian/Bin/Shutdown
 bindsym $mod+Control+h workspace prev_on_output
 bindsym $mod+Control+Left workspace prev_on_output
@@ -330,7 +330,7 @@ client.focused_inactive $inactive-bg-color  $inactive-bg-color $inactive-text-co
 client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color          #aaaaaa
 
 # bar color
-bindsym $mod+Control+r mode "resize"
+bindsym $mod+r mode "resize"
 
 #Start i3bar to display a workspace bar (plus the system information i3status finds out, if available)
 #bar {
