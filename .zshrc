@@ -170,4 +170,4 @@ alias network='sudo nethogs'
 typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
 #Print ascii art
 #/home/christian/Bin/fm6000 -dog -c magenta
-/usr/local/bin/pokemon-colorscripts -r
+#/usr/local/bin/pokemon-colorscripts -r
