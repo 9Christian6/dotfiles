@@ -197,6 +197,7 @@ workspace $ws19 output HDMI-0
 
 assign [class="TelegramDesktop"] $ws2
 assign [class="whatsdesk"] $ws2
+assign [class="Signal"] $ws2
 no_focus [class="walc"]
 #assign [class="gnome-terminal-server"] $ws4
 assign [class="Steam"] $ws8
@@ -352,23 +353,28 @@ bindsym $mod+r mode "resize"
 #Startup
 #Autostart
 #autostart
-exec_always --no-startup-id compton -b
-exec_always --no-startup-id $HOME/Bin/StartDiscord
-exec_always --no-startup-id $HOME/Bin/PolybarStart
 
-exec_always --no-startup-id ~/.i3/i3-chrome-tab-dragging.py
-exec --no-startup-id telegram-desktop
-exec --no-startup-id whatsdesk
-exec --no-startup-id spotify
-exec --no-stratup-id todoist
-exec --no-startup-id $HOME/Bin/TerminalStartup
-exec --no-startup-id i3-msg workspace 2
-exec --no-startup-id $HOME/Bin/Calendar
-exec --no-startup-id $HOME/Bin/Mails
-exec --no-startup-id go-for-it
-exec "xrandr --output HDMI-0 --auto --right-of DVI-D-0"
-exec "i3-msg '[instance=gnome-terminal-server] move to workspace 4'"
+exec_always --no-startup-id /home/christian/Bin/AlwaysStartup
+exec --no-startup-id /home/christian/Bin/Startup
+
+#exec_always --no-startup-id compton -b
+#exec_always --no-startup-id $HOME/Bin/StartDiscord
+#exec_always --no-startup-id $HOME/Bin/PolybarStart
+
+#exec_always --no-startup-id ~/.i3/i3-chrome-tab-dragging.py
+#exec --no-startup-id telegram-desktop
+#exec --no-startup-id signal-desktop
+#exec --no-startup-id whatsdesk
+#exec --no-startup-id spotify
+#exec --no-stratup-id todoist
+#exec --no-startup-id $HOME/Bin/TerminalStartup
+#exec --no-startup-id i3-msg workspace 2
+#exec --no-startup-id $HOME/Bin/Calendar
+#exec --no-startup-id $HOME/Bin/Mails
+#exec --no-startup-id go-for-it
+#exec "xrandr --output HDMI-0 --auto --right-of DVI-D-0"
+#exec "i3-msg '[instance=gnome-terminal-server] move to workspace 4'"
 
 # prevent screen from going into energy save mode
-exec --no-startup-id xset -dpms s off
+#exec --no-startup-id xset -dpms s off
 # vim: filetype=i3config
