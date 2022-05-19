@@ -360,8 +360,8 @@ exec --no-startup-id /home/christian/Bin/Startup
 #exec_always --no-startup-id compton -b
 #exec_always --no-startup-id $HOME/Bin/StartDiscord
 #exec_always --no-startup-id $HOME/Bin/PolybarStart
-
 #exec_always --no-startup-id ~/.i3/i3-chrome-tab-dragging.py
+
 #exec --no-startup-id telegram-desktop
 #exec --no-startup-id signal-desktop
 #exec --no-startup-id whatsdesk
