@@ -115,9 +115,6 @@ module-margin-right = 2
 font-0 = DejaVu Sans Mono
 font-1 = fixed:pixelsize=10;1
 font-2 = unifont:fontformat=truetype:size=8:antialias=false;0
-#font-4 = FontAwesome:style=Regular:size=10
-font-3 = Font Awesome 5 Free Solid:style=Regular:size=10
-#font-4 = Font Awesome 5 Brands:style=Regular:size=10
 
 modules-left = i3
 modules-right = network cpu pulseaudio day date time shutdown
@@ -185,7 +182,7 @@ ws-icon-9 = 10;
 ws-icon-10 = 11;
 ws-icon-11 = 12;
 ws-icon-12 = 13;
-ws-icon-13 = 14;
+ws-icon-13 = 14;
 
 label-separator = |
 label-separator-padding = 0
