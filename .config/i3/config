@@ -81,7 +81,7 @@ bindsym $mod+q exec "eval $(xdotool getmouselocation --shell) && shutter -s=$X,$
 bindsym $mod+Shift+y exec --no-startup-id ~/Opt/emojipick/emojipick
 bindsym $mod+a exec --no-startup-id /home/christian/Bin/Lock
 bindsym $mod+u exec --no-startup-id /home/christian/Bin/removeUrgency
-bindsym $mod+c exec --no-startup-id chromium
+bindsym $mod+c exec --no-startup-id chromium-browser
 bindsym $mod+Control+c exec --no-startup-id  /home/christian/Bin/chrome.sh
 bindsym $mod+y exec --no-startup-id chromium www.youtube.com --new-window
 bindsym $mod+t exec --no-startup-id chromium www.twitch.tv/following/live --new-window
