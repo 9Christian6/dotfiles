@@ -172,9 +172,10 @@ command! extract! extract -f %a %f %n
 
 " PDF
 fileviewer *.pdf
-    \ vifmimg pdf %px %py %pw %ph %c
-    \ %pc
-    \ vifmimg clear
+   \ vifmimg pdf %px %py %pw %ph %c
+   \ %pc
+   \ vifmimg clear
+
 filetype *.pdf okular %f &
 
 fileviewer *.djvu
