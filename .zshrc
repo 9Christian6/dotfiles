@@ -119,11 +119,16 @@ export EDITOR='nvim'
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
+#Print ascii art
+#/home/christian/Bin/fm6000 -dog -c magenta
+#/usr/local/bin/pokemon-colorscripts -r
+
 #functions
 function addAlias(){echo "alias $1='$2'" >> ~/.zshrc; }
 function search(){la | grep -i $1}
 function showInstalled(){dpkg --list "*$1*"}
-function makeCD(){mkdir $1 && cd $1}
+function makecd(){mkdir $1 && cd $1}
 
 #aliases
 alias Backup='sudo rsnapshot -v alpha'
@@ -168,8 +173,4 @@ alias update='sudo apt update && sudo apt upgrade'
 alias enableXBox='sudo systemctl start xow.service'
 alias disableXBox='sudo systemctl stop xow.service'
 alias network='sudo nethogs'
-
-typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
-#Print ascii art
-#/home/christian/Bin/fm6000 -dog -c magenta
-#/usr/local/bin/pokemon-colorscripts -r
+alias delete='gio trash'
