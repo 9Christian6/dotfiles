@@ -47,8 +47,8 @@ font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
 font-2 = FontAwesome:style=Regular:size=10
 
 modules-left = i3 
-#modules-center = programs
-modules-right= spotify previous playpause next day date time shutdown
+modules-center = daysleft
+modules-right= day date time shutdown
 
 tray-position = none
 cursor-click = pointer
@@ -83,7 +83,7 @@ font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
 font-2 = FontAwesome:style=Regular:size=10
 
 modules-left = i3
-modules-right =  network memory-info cpu pulseaudio day date time shutdown
+modules-right = network memory-info cpu pulseaudio day date time shutdown
 
 cursor-click = pointer
 cursor-scroll = ns-resize
@@ -319,6 +319,12 @@ hook-1 = echo ""
 ; Paused
 hook-2 = echo ""
 click-left = "spotifyctl -q playpause"
+
+[module/daysleft]
+type = custom/script
+exec = ~/Bin/DaysUntilBachelor
+intercal = 100
+#format-suffix = " |"
 
 [module/spotify]
 type = custom/ipc
