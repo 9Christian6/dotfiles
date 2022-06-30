@@ -222,6 +222,9 @@ assign [class="Code"] $ws1
 assign [class="Chromium" instance="calendar.google.com"] $ws13
 assign [class="Chromium" instance="webmail.uni-saarland.de__imp_dynamic.php"] $ws12
 assign [class="Chromium" instance="mail.google.com__mail_u_0"] $ws12
+for_window [class="Chromium" instance="calendar.google.com"] floating disable
+for_window [class="Chromium" instance="webmail.uni-saarland.de__imp_dynamic.php"] floating disable
+for_window [class="Chromium" instance="mail.google.com__mail_u_0"] floating disable
 assign [class="go-for-it"] $ws14
 assign [class="Go-for-it"] $ws14
 for_window [class="Spotify"] move to workspace $ws5
