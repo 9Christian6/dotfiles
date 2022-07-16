@@ -249,8 +249,8 @@ for_window [class="Desmume"] floating enable
 for_window [class="SFML works!"] floating enable
 for_window [class="Gimp"] floating enable
 
-#go to Coding workspace
-bindsym $mod+Control+space workspace $ws4; workspace $ws1; exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ 1 && $refresh_i3status
+#go to University workspace
+bindsym $mod+Control+space workspace $ws10; workspace $ws1; exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ 1 && $refresh_i3status
 
 # switch to workspace
 bindsym $mod+1 workspace number $ws1
@@ -317,10 +317,10 @@ mode "resize" {
         # Pressing right will grow the window’s width.
         # Pressing up will shrink the window’s height.
         # Pressing down will grow the window’s height.
-        bindsym $right       resize shrink width 10 px or 10 ppt
-        bindsym $down       resize grow height 10 px or 10 ppt
-        bindsym $up         resize shrink height 10 px or 10 ppt
-        bindsym $left      resize grow width 10 px or 10 ppt
+        bindsym $left       resize shrink width 10 px or 10 ppt
+        bindsym $up       resize grow height 10 px or 10 ppt
+        bindsym $down         resize shrink height 10 px or 10 ppt
+        bindsym $right      resize grow width 10 px or 10 ppt
 
         # same bindings, but for the arrow keys
         bindsym Left        resize shrink width 10 px or 10 ppt
