@@ -124,6 +124,9 @@ typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
 #/home/christian/Bin/fm6000 -dog -c magenta
 #/usr/local/bin/pokemon-colorscripts -r
 
+#Print Habit stack
+cat ~/Habits
+
 #functions
 function addAlias(){echo "alias $1='$2'" >> ~/.zshrc; }
 function search(){la | grep -i $1}
