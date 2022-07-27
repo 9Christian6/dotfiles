@@ -55,7 +55,7 @@ fake-background: "screenshot";
 /*	window-format: "{w}    {c}   {t}";*/
 /*	click-to-exit: true;*/
 /*	show-match: true;*/
-theme: "DarkBlue.rasi";
+/*	theme: "DarkBlue.rasi";*/
 /*	color-normal: ;*/
 /*	color-urgent: ;*/
 /*	color-active: ;*/
@@ -150,4 +150,5 @@ theme: "DarkBlue.rasi";
 /*	me-accept-entry: "MouseDPrimary";*/
 /*	me-accept-custom: "Control+MouseDPrimary";*/
 }
-	
+
+@theme "DarkBlue"
