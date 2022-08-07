@@ -170,13 +170,14 @@ command! extract! extract -f %a %f %n
 " You can also add %CLEAR if you want to clear screen before running FUSE
 " program.
 
+"command okular okular *.{pdf}
 " PDF
-fileviewer *.pdf
+ fileviewer *.pdf
    \ vifmimg pdf %px %py %pw %ph %c
    \ %pc
    \ vifmimg clear
 
-filetype *.pdf okular %f &
+filetype *.pdf okular &
 
 fileviewer *.djvu
     \ vifmimg djvu %px %py %pw %ph %c
