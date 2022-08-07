@@ -13,6 +13,9 @@ fi
 # Path to your oh-my-zsh installation.
 export ZSH="/home/christian/.oh-my-zsh"
 
+# Set emulator
+# export TERMINAL="/usr/bin/xterm"
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
