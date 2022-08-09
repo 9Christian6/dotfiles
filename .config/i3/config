@@ -217,6 +217,7 @@ assign [class="leagueclient.exe"] $ws11
 assign [class="leagueclientux.exe"] $ws11
 assign [class="league of legends.exe"] $ws11
 assign [class="leagueclient.exe"] $ws11
+assign [class="Untitled Goose Game"] $ws11
 assign [class="Todoist"] $ws14
 assign [class="Code"] $ws1
 assign [class="Chromium" instance="calendar.google.com"] $ws13
