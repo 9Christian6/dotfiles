@@ -47,7 +47,6 @@ font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
 font-2 = FontAwesome:style=Regular:size=10
 
 modules-left = i3 
-modules-center = daysleft
 modules-right= day date time shutdown
 
 tray-position = none
