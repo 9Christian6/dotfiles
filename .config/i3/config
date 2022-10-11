@@ -89,11 +89,12 @@ bindsym $mod+q exec "shutter -s"
 bindsym $mod+Shift+y exec --no-startup-id ~/Opt/emojipick/emojipick
 bindsym $mod+a exec --no-startup-id /home/christian/Bin/Lock
 bindsym $mod+u exec --no-startup-id /home/christian/Bin/removeUrgency
-bindsym $mod+c exec --no-startup-id chromium-browser
+# bindsym $mod+c exec --no-startup-id chromium-browser
+bindsym $mod+c exec --no-startup-id firefox -new-window
 bindsym $mod+Control+c exec --no-startup-id  /home/christian/Bin/chrome.sh
-bindsym $mod+y exec --no-startup-id chromium www.youtube.com --new-window
-bindsym $mod+t exec --no-startup-id chromium www.twitch.tv/following/live --new-window
-bindsym $mod+Control+r exec --no-startup-id chromium old.reddit.com --new-window
+bindsym $mod+y exec --no-startup-id firefox -new-window www.youtube.com 
+bindsym $mod+t exec --no-startup-id firefox -new-window www.twitch.tv/following/live 
+bindsym $mod+Control+r exec --no-startup-id firefox -new-window old.reddit.com 
 bindsym $mod+Control+s exec /home/christian/Bin/Shutdown
 bindsym $mod+Control+h workspace prev_on_output
 bindsym $mod+Control+Left workspace prev_on_output
