@@ -184,6 +184,8 @@ fileviewer *.djvu
     \ %pc
     \ vifmimg clear
 
+filetype *.exr tev &
+
 fileviewer *.epub
     \ vifmimg epub %px %py %pw %ph %c
     \ %pc
