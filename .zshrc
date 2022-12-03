@@ -128,7 +128,7 @@ typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
 #/usr/local/bin/pokemon-colorscripts -r
 
 #Print Habit stack
-cat ~/Habits
+#cat ~/Habits
 
 #functions
 function addAlias(){echo "alias $1='$2'" >> ~/.zshrc; }
