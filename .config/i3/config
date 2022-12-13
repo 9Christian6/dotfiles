@@ -101,7 +101,7 @@ bindsym $mod+Control+Left workspace prev_on_output
 bindsym $mod+Control+l workspace next_on_output
 bindsym $mod+Control+Right workspace next_on_output
 bindsym $mod+m move scratchpad
-bindsym $mod+n scratchpad show
+bindsym $mod+n scratchpad show, floating disable
 
 # Sound Control
 bindsym $mod+F1 exec --no-startup-id amixer -q -D pulse sset Master toggle
@@ -226,6 +226,7 @@ assign [class="Code"] $ws1
 assign [class="Chromium" instance="calendar.google.com"] $ws13
 assign [class="Chromium" instance="webmail.uni-saarland.de__imp_dynamic.php"] $ws12
 assign [class="Chromium" instance="mail.google.com__mail_u_0"] $ws12
+assign [class="thunderbird"] $ws12
 for_window [class="Chromium" instance="calendar.google.com"] floating disable
 for_window [class="Chromium" instance="webmail.uni-saarland.de__imp_dynamic.php"] floating disable
 for_window [class="Chromium" instance="mail.google.com__mail_u_0"] floating disable
