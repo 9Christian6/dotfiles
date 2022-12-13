@@ -26,4 +26,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'vim-latex/vim-latex'
     "Autocompletion
     Plug 'vim-scripts/AutoComplPop'
+    "Clang-autoformat
+    Plug 'rhysd/vim-clang-format'
 call plug#end()
