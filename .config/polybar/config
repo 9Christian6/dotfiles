@@ -296,9 +296,9 @@ format-disconnected-suffix = " |"
 type = custom/ipc
 format-font = 2
 ; Default
-hook-0 = echo """
+hook-0 = echo ""
 ; When spotify active
-hook-1 = echo ""
+hook-1 = echo ""
 click-left = "spotifyctl -q previous"
 
 [module/next]
@@ -320,12 +320,6 @@ hook-1 = echo ""
 ; Paused
 hook-2 = echo ""
 click-left = "spotifyctl -q playpause"
-
-[module/daysleft]
-type = custom/script
-exec = ~/Bin/DaysUntilBachelor
-intercal = 100
-#format-suffix = " |"
 
 [module/spotify]
 type = custom/ipc
