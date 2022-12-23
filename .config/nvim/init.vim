@@ -1,12 +1,9 @@
-syntax on
 set number
 set relativenumber
 set path+=**
 set wildmenu
-autocmd VimEnter * ColorHighlight .
 
 " FILE BROWSING:
-
 " Tweaks for browsing
 let g:netrw_banner=0        " disable annoying banner
 let g:netrw_browse_split=4  " open in prior window
@@ -21,3 +18,5 @@ let g:netrw_list_hide.=',\(^\|\s\s\)\zs\.\S\+'
 " - check |netrw-browse-maps| for more mappings
 
 source $HOME/.config/nvim/vim-plug/plugins.vim
+
+colorscheme onedark

@@ -7,25 +7,26 @@ if empty(glob('~/.config/nvim/autoload/plug.vim'))
 endif
 
 call plug#begin('~/.config/nvim/autoload/plugged')
-
     " i3config syntax
     Plug 'mboughaba/i3config.vim'
     " Better Syntax Support
     Plug 'sheerun/vim-polyglot'
     " File Explorer
-    Plug 'scrooloose/NERDTree'
+    Plug 'preservim/nerdtree'
     " Auto pairs for '(' '[' '{'
     Plug 'jiangmiao/auto-pairs'
     " Auto completion
     Plug 'codota/TabNine'
     " Writing with sudo permissions
     Plug 'lambdalisue/suda.vim'
-    " Color Highlighting
-    Plug 'chrisbra/Colorizer'
     "LaTeX Support
     Plug 'vim-latex/vim-latex'
     "Autocompletion
     Plug 'vim-scripts/AutoComplPop'
     "Clang-autoformat
     Plug 'rhysd/vim-clang-format'
+    "C++ Autocompletion
+    Plug 'Valloric/YouCompleteMe' 
+    "Colorschemes
+    Plug 'joshdick/onedark.vim'
 call plug#end()
