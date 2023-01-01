@@ -19,8 +19,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'codota/TabNine'
     " Writing with sudo permissions
     Plug 'lambdalisue/suda.vim'
-    "LaTeX Support
-    Plug 'vim-latex/vim-latex'
     "Autocompletion
     Plug 'vim-scripts/AutoComplPop'
     "Clang-autoformat
@@ -29,4 +27,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'Valloric/YouCompleteMe' 
     "Colorschemes
     Plug 'joshdick/onedark.vim'
-call plug#end()
+    "Compile Latex code
+    Plug 'lervag/vimtex'
+    "Cmake integration
+    Plug 'cdelledonne/vim-cmake'
+    call plug#end()
