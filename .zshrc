@@ -139,14 +139,13 @@ function makecd(){mkdir $1 && cd $1}
 #aliases
 alias Backup='sudo rsnapshot -v alpha'
 alias la="ls -a"
-alias cl="clear"
+alias cl="cd . && clear"
 alias cls="cd ~ && clear"
 alias cla="clear && la"
 alias config='/usr/bin/git --git-dir=/home/christian/dotfiles/ --work-tree=/home/christian'
 alias dotfileBackup='/usr/bin/git --git-dir=/home/christian/dotfiles/ --work-tree=/home/christian'
 alias sudoDotfileBackup='sudo /usr/bin/git --git-dir=/home/christian/dotfiles/ --work-tree=/home/christian'
 alias sudoconfig='sudo /usr/bin/git --git-dir=$HOME/dotfiles --work-tree=$HOME'
-alias ccc='/home/christian/Desktop/Bachelor-Arbeit/build/ccc'
 alias listDisks='sudo fdisk -l | grep -i /dev/sd'
 alias lgrep='la | grep'
 alias vim='nvim'
@@ -165,11 +164,9 @@ alias clearmake='cmake --build . && clear'
 alias cleanmake='cmake --build . --target clean'
 alias cleanmakerun='cleanmake && makerun'
 alias aptUpdate='sudo apt-get update && sudo apt-get upgrade && sudo snap refresh'
-alias clearmakerun='clear && cmake --build . && ccc'
 alias open=xdg-open
 alias tetris='vitetris'
 alias DS='flatpak run org.desmume.DeSmuME'
-alias makerun='cmake --build . && ccc'
 alias scriptBackup='/usr/bin/git --git-dir=/home/christian/scripts/ --work-tree=/home/christian'
 alias vifm='$HOME/.config/vifm/scripts/vifmrun'
 alias M64='nohup mupen64plus ~/Opt/N64Games/Mario64.n64 &'
