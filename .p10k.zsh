@@ -1635,4 +1635,4 @@ typeset -g POWERLEVEL9K_CONFIG_FILE=${${(%):-%x}:a}
 'builtin' 'unset' 'p10k_config_opts'
 
 # Set home icon
-typeset -g POWERLEVEL9K_LINUX_UBUNTU_ICON=''
+typeset -g POWERLEVEL9K_LINUX_UBUNTU_ICON=''
