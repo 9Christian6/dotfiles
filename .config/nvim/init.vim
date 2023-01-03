@@ -6,6 +6,10 @@ set wildmenu
 " SET LEADER
 let mapleader = '\'
 
+nmap <LEADER>w :w<CR>
+nmap <LEADER>q :q<CR>
+nmap <LEADER>wq :wq<CR>
+
 " FILE BROWSING:
 " Tweaks for browsing
 let g:netrw_banner=0        " disable annoying banner
