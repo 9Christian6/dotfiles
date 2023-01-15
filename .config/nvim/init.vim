@@ -2,12 +2,14 @@ set number
 set relativenumber
 set path+=**
 set wildmenu
+set mouse=nicr
 
 " SET LEADER
 let mapleader = '\'
 
 nmap <LEADER>w :w<CR>
 nmap <LEADER>q :q<CR>
+nmap <LEADER>wq :wq<CR>
 
 " FILE BROWSING:
 " Tweaks for browsing
