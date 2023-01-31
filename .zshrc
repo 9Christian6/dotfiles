@@ -143,7 +143,8 @@ alias :wq='exit'
 alias Backup='sudo rsnapshot -v alpha'
 alias DS='flatpak run org.desmume.DeSmuME'
 alias M64='nohup mupen64plus ~/Opt/N64Games/Mario64.n64 &'
-alias Update='sudo apt update && sudo apt upgrade && sudo snap refresh && flatpak update'
+alias update='sudo apt-get update && sudo apt-get upgrade && sudo snap refresh && flatpak update'
+alias Update='sudo apt-get update && sudo apt-get upgrade && sudo snap refresh && flatpak update'
 alias aptUpdate='sudo apt-get update && sudo apt-get upgrade && sudo snap refresh'
 alias cl="cd . && clear"
 alias cla="clear && la"
@@ -172,7 +173,7 @@ alias scriptBackup='/usr/bin/git --git-dir=/home/christian/scripts/ --work-tree=
 alias sudoDotfileBackup='sudo /usr/bin/git --git-dir=/home/christian/dotfiles/ --work-tree=/home/christian'
 alias sudoconfig='sudo /usr/bin/git --git-dir=$HOME/dotfiles --work-tree=$HOME'
 alias tetris='vitetris'
-alias update='sudo apt update && sudo apt upgrade && sudo snap refresh && flatpak update'
 alias vifm='$HOME/.config/vifm/scripts/vifmrun'
 alias vim='nvim'
 alias zshrc='nvim $HOME/.zshrc && source $HOME/.zshrc'
+alias Wetter='curl wttr.in/Heusweiler'
