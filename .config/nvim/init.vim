@@ -2,7 +2,8 @@ set number
 set relativenumber
 set path+=**
 set wildmenu
-set mouse=nicr
+"set mouse=nicr
+set mouse=
 
 " SET LEADER
 let mapleader = '\'
