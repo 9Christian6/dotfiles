@@ -373,7 +373,7 @@ bindsym $mod+r mode "resize"
 exec_always --no-startup-id /home/christian/Bin/AlwaysStartup
 exec --no-startup-id /home/christian/Bin/Startup
 
-#exec_always --no-startup-id picom -b
+#exec_always --no-startup-id /home/christian/Bin/picom --config /home/christian/Opt/picom/picom.sample.conf -b
 #exec_always --no-startup-id $HOME/Bin/StartDiscord
 #exec_always --no-startup-id $HOME/Bin/PolybarStart
 #exec_always --no-startup-id ~/.i3/i3-chrome-tab-dragging.py
