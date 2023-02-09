@@ -12,6 +12,13 @@ nmap <LEADER>w :w<CR>
 nmap <LEADER>q :q<CR>
 nmap <LEADER>wq :wq<CR>
 
+" Remap for browsing in big text blocks
+nmap j gj
+nmap k gk
+
+"Colored column end
+set cc=80
+
 " FILE BROWSING:
 " Tweaks for browsing
 let g:netrw_banner=0        " disable annoying banner
