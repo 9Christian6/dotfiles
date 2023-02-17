@@ -11,6 +11,7 @@ let mapleader = '\'
 nmap <LEADER>w :w<CR>
 nmap <LEADER>q :q<CR>
 nmap <LEADER>wq :wq<CR>
+nnoremap <leader>f gg=G<CR>
 
 " Remap for browsing in big text blocks
 nmap j gj
