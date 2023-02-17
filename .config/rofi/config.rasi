@@ -18,6 +18,8 @@ configuration {
     fg-alt: #787c99;
 
     background-color: @bg;
+    normal-background-color: @bg;
+    selected-background-color: @bg;
     selected-normal-foreground: rgba ( 250, 251, 252, 100 % );
     selected-active-background:  rgba ( 0, 150, 136, 100 % );
 
@@ -32,7 +34,9 @@ window {
 }
 
 element {
-  padding: 8 0;
+  padding: 8 20;
+  background-color: @bg;
+  normal-background-color: #FF00FF;
   text-color: @fg-alt;
 }
 
@@ -42,6 +46,7 @@ element selected {
 }
 
 element-text {
+  background-color: #00000000;
   text-color: inherit;
   vertical-align: 0.5;
 }
@@ -49,6 +54,7 @@ element-text {
 element-icon {
   size: 30;
   padding: 0 10 0 0;
+  background-color: #00000000;
 }
 
 entry {
