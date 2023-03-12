@@ -31,4 +31,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'lervag/vimtex'
     "Cmake integration
     Plug 'cdelledonne/vim-cmake'
+    "Firefox vim integration
+    Plug 'glacambre/firenvim'
     call plug#end()
