@@ -146,6 +146,7 @@ alias M64='nohup mupen64plus ~/Opt/N64Games/Mario64.n64 &'
 alias update='/home/christian/Bin/Update.sh'
 alias Update='/home/christian/Bin/Update.sh'
 alias cl="cd . && clear"
+#alias clear="cd . && clear"
 alias cla="clear && la"
 alias cleanmake='cmake --build . --target clean'
 alias cleanmakerun='cleanmake && makerun'
