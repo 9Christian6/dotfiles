@@ -3,7 +3,9 @@ set relativenumber
 set path+=**
 set wildmenu
 "set mouse=nicr
-set mouse=
+set mouse=a
+map <ScrollWheelUp> CTRL-E
+map <ScrollWheelDown> CTRL-Y
 
 " SET LEADER
 let mapleader = '\'
