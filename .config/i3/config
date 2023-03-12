@@ -86,23 +86,24 @@ bindsym $mod+d exec --no-startup-id rofi -show drun -ignored-prefixes 'chrome'
 #KeyBindings
 #Key Bindings
 bindsym $mod+q exec "shutter -s"
-bindsym $mod+Shift+y exec --no-startup-id ~/Opt/emojipick/emojipick
 bindsym $mod+a exec --no-startup-id /home/christian/Bin/Lock
 bindsym $mod+u exec --no-startup-id /home/christian/Bin/removeUrgency
 # bindsym $mod+c exec --no-startup-id chromium-browser
 bindsym $mod+c exec --no-startup-id firefox -new-window
-bindsym $mod+Control+c exec --no-startup-id  /home/christian/Bin/chrome.sh
 bindsym $mod+y exec --no-startup-id firefox -new-window www.youtube.com 
 bindsym $mod+t exec --no-startup-id firefox -new-window www.twitch.tv/following/live 
+bindsym $mod+m move scratchpad
+bindsym $mod+n scratchpad show, floating disable
+bindsym $mod+Control+x exec --no-startup-id copyq
+bindsym $mod+Control+c exec --no-startup-id  /home/christian/Bin/chrome.sh
 bindsym $mod+Control+r exec --no-startup-id firefox -new-window old.reddit.com 
 bindsym $mod+Control+s exec /home/christian/Bin/Shutdown
 bindsym $mod+Control+h workspace prev_on_output
 bindsym $mod+Control+Left workspace prev_on_output
 bindsym $mod+Control+l workspace next_on_output
 bindsym $mod+Control+Right workspace next_on_output
-bindsym $mod+m move scratchpad
-bindsym $mod+n scratchpad show, floating disable
-bindsym $mod+Control+x exec --no-startup-id copyq
+bindsym $mod+Shift+y exec --no-startup-id ~/Opt/emojipick/emojipick
+bindsym $mod+Shift+s exec --no-startup-id pulsemixer
 
 # Sound Control
 bindsym $mod+F1 exec --no-startup-id amixer -q -D pulse sset Master toggle
@@ -225,6 +226,7 @@ assign [class="Untitled Goose Game"] $ws11
 assign [class="Todoist"] $ws14
 assign [class="Code"] $ws1
 assign [class="Chromium" instance="calendar.google.com"] $ws13
+assign [class="WebApp"] $ws13
 assign [class="Chromium" instance="webmail.uni-saarland.de__imp_dynamic.php"] $ws12
 assign [class="Chromium" instance="mail.google.com__mail_u_0"] $ws12
 assign [class="thunderbird"] $ws12
